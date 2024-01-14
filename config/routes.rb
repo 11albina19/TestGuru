@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
   get 'others/about'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
   get '/about', to: 'others#about'
+  get '/about/author', to: 'others#author'
 end
