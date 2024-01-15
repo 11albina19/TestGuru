@@ -8,13 +8,11 @@
 
 * Test
 
+* Category
+
 * Question
 
 * Answer
 
 * Result
-
-* Menu
-
-* Passing
 
