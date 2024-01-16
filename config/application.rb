@@ -10,7 +10,6 @@ Bundler.require(*Rails.groups)
 
 module Testguru
   class Application < Rails::Application
-    VERSION = '0.1.0'
     config.load_defaults 7.0
     config.time_zone = 'Samara'
     config.i18n.default_locale = :ru
