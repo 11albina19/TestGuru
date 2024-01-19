@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyString
+  points: 1
+  answers: MyString
+  user_id: one
+  test_id: one
+
+two:
+  body: MyString
+  points: 1
+  answers: MyString
+  user_id: two
+  test_id: two
