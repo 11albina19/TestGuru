@@ -3,7 +3,7 @@ class CreateAnswers < ActiveRecord::Migration[7.0]
     create_table :answers do |t|
       t.string :body, null: false
       t.boolean :correct, null: false, default: false
-      t.references :question_id, null: false, foreign_key: true
+      add_reference :question, foreign_key: true
 
       t.timestamps
     end
