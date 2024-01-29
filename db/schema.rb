@@ -35,9 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_19_121703) do
   end
 
   create_table "results", force: :cascade do |t|
-    t.string "body"
-    t.integer "points"
-    t.string "answers"
     t.integer "user_id", null: false
     t.integer "test_id", null: false
     t.datetime "created_at", null: false
