@@ -1,8 +1,7 @@
 class User < ApplicationRecord
 
   def tests(level)
-    #вернуть список всех тестов, которые проходит или проходил
-    #для этого пользователя
-    #для этого уровня
+    test_id = Result.where(user_id: self.id).pluck(:test_id)
+    Test.where(id: test_id, level: level)
   end
 end
