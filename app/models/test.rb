@@ -5,6 +5,4 @@ class Test < ApplicationRecord
     array.sort! {|a,b| b <=> a}
     array
   end
-
-
 end
