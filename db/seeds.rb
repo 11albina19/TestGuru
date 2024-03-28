@@ -40,3 +40,7 @@ answers_data = [
 answers_data.each do |answer_data|
   Answer.create(answer_data)
 end
+
+Result.create(user_id: admin.id, test_id: test1.id)
+Result.create(user_id: user1.id, test_id: test2.id)
+Result.create(user_id: user1.id, test_id: test4.id)
