@@ -1,8 +1,7 @@
 class Test < ApplicationRecord
+  belongs_to :category
 
-  def self.sort_name (category)
-    array = Test.where(category_id: category.id).pluck(:title)
-    array.sort! {|a,b| b <=> a}
-    array
+  def self.sort_tests_selection_category(category_name)
+    Category.where(title: category_name).joins(:tests).order('tests.title DESC').pluck('tests.title')
   end
 end

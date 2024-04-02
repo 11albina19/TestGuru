@@ -7,10 +7,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-category_db = Categorie.create(title: "Базы данных")
-category_g = Categorie.create(title: "Git")
-category_ror = Categorie.create(title: "Ruby on Rails")
-category_os = Categorie.create(title: "OS")
+category_db = Category.create(title: "Базы данных")
+category_g = Category.create(title: "Git")
+category_ror = Category.create(title: "Ruby on Rails")
+category_os = Category.create(title: "OS")
 
 user1 = User.create(password: '12345', mail: 'ivan@google.com')
 user2 = User.create(password: 'qwerty', mail: 'petr@mail.ru',)

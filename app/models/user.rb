@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+  has_many :results
 
   def tests(level)
-    test_id = Result.where(user_id: self.id).pluck(:test_id)
-    Test.where(id: test_id, level: level)
+    Test.where(id: Result.where(user_id: self.id).select(:test_id)).where(level: level)
   end
 end
