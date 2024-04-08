@@ -37,10 +37,12 @@ answers_data = [
   { body: 'Миграции - это переработка кода, процесс изменения внутренней структуры программы, в ходе которой происходит перенос кода из одних классов в другие', correct: false, question_id: question5.id },
 ]
 
-answers_data.each do |answer_data|
-  Answer.create!(answer_data)
-end
+Answer.create!(answers_data)
 
-Result.create!(user_id: admin.id, test_id: test1.id)
-Result.create!(user_id: user1.id, test_id: test2.id)
-Result.create!(user_id: user1.id, test_id: test4.id)
+result_data = [
+  {user_id: admin.id, test_id: test1.id},
+  {user_id: user1.id, test_id: test2.id},
+  {user_id: user1.id, test_id: test4.id}
+]
+
+Result.create!(result_data)
