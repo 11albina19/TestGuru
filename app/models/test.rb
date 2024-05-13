@@ -1,6 +1,8 @@
 class Test < ApplicationRecord
   belongs_to :category, optional: true
 
+  has_many :questions, depent: :destroy
+
   def self.sort_tests_selection_category(category_name)
     joins("INNER JOIN categories ON tests.category_id = categories.id")
       .where(categories: { title: category_name })
