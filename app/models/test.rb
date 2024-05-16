@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User'
 
   has_many :questions, dependent: :destroy
-  has_many :results, foreign_key: :test_id
+  has_many :results, dependent: :destroy
   has_many :users, through: :results
 
   def self.sort_tests_selection_category(category_name)
