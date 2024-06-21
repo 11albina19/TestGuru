@@ -5,7 +5,9 @@ class User < ApplicationRecord
 
   validates :mail, presence: true
 
-  def user_tests_at_level(level)
-    self.passed_tests.where(level: level)
-  end
+  scope :user_tests_at_level, -> (level) { self.passed_tests.where(level: level) }
+
+  #def user_tests_at_level(level)
+  #  self.passed_tests.where(level: level)
+  #end
 end
