@@ -6,6 +6,6 @@ class User < ApplicationRecord
   validates :mail, presence: true
 
   def user_tests_at_level(level)
-    self.passed_tests.where(level: level)
+    passed_tests.where(level:)
   end
 end
