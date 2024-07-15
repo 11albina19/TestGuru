@@ -4,5 +4,4 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validates :body, presence: true
-  validate :validate_quantity_answers
 end
