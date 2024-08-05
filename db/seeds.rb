@@ -34,6 +34,8 @@ questions = Question.create!([
                                { body: 'В чем заключается третья нормальная форма?', test: tests[0] },
                                { body: 'Чем жесткая ссылка отличается от символической?', test: tests[2] },
                                { body: 'Что такое ветка?', test: tests[3] },
+                               { body: 'Что делает команда git add?', test: tests[3] },
+                               { body: 'Как переименовать локальную ветку?', test: tests[3] },
                                { body: 'Что такое миграция?', test: tests[4] }
                              ])
 
