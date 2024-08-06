@@ -1,0 +1,9 @@
+<h1><%= @test.title %></h1>
+
+<%= form_with model: [@test, @question], local: true do |form| %>
+  <div class="mb-5">
+    <%= form.label :body, "Вопрос: ", class: "form-label" %>
+    <%= form.text_field :body, id: :question_body, class: "form-control" %>
+  </div>
+  <%= form.submit "Создать", class: "btn btn-primary" %>
+<% end %>
