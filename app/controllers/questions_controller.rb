@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :find_test, only: %i[index new create]
-  before_action :find_question, only: %i[show]
+  before_action :find_question, only: %i[show destroy]
 
   def index
     @questions = @test.questions
@@ -8,7 +8,6 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render html: @question.body
   end
 
   def new
@@ -24,6 +23,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @question.destroy
+  end
+
   private
 
   def find_test
@@ -32,6 +35,8 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+    render plain: "Question not found"
   end
 
   def question_params
