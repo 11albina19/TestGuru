@@ -1,0 +1,6 @@
+<h1>Вопрос</h1>
+<p><%= @question.body %></p>
+<%= form_with model: @question, method: :delete, local: true do |form| %>
+  <%= form.submit "Удалить", class: "btn btn-danger" %>
+<% end %>
+<%= link_to "Назад", test_questions_path(@question.test), class: "btn btn-secondary" %>
