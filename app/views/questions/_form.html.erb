@@ -1,0 +1,9 @@
+<%= render 'shared/errors', resource: @question %>
+<p>
+  <%= form.label :body, 'Вопрос'  %>
+  <%= form.text_field :body, id: :question_body %>
+</p>
+<p>
+  <%= form.label :test_id, 'Тест'  %>
+  <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
+</p>

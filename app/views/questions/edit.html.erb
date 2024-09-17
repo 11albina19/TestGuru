@@ -1,22 +1,6 @@
-<h1>Обновить вопрос</h1>
-<%= form_with model: @question , local: true do |form| %>
-  <% if @question .errors.present? %>
-    <div>
-      <h2><%= pluralize(@question .errors.count, 'error') %> detected:</h2>
-      <ul>
-        <% @question .errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= form.label :body %>
-    <%= form.text_field :bode, id: :question_body %>
-  </p>
-  <p>
-    <%= form.label :test_id %>
-    <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
-  </p>
-  <p><%= form.submit %></p>
+<h3>Редактировать вопрос <%= @question.body%></h3>
+<%= form_with model: @question, local: true do |form| %>
+  <%= render 'form', form: form %>
+  <p><%= form.submit 'Обновить вопрос' %></p>
 <% end %>
+<%= link_to 'Назад', test_path(@question.test) %>
