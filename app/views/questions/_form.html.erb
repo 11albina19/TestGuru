@@ -1,3 +1,4 @@
+<%= form_with model: [@test, @question], local: true do |form| %>
 <%= render 'shared/errors', resource: @question %>
 <p>
   <%= form.label :body, 'Вопрос'  %>
@@ -7,3 +8,6 @@
   <%= form.label :test_id, 'Тест'  %>
   <%= form.collection_select :test_id, Test.all, :id, :title, prompt: true %>
 </p>
+  <p><%= form.submit 'Сохранить' %></p>
+<% end %>
+<%= link_to 'Назад', test_path(@question.test) %>
