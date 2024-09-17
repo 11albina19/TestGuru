@@ -1,6 +1,12 @@
-<h1>Вопрос</h1>
-<p><%= @question.body %></p>
-<%= form_with model: @question, method: :delete, local: true do |form| %>
-  <%= form.submit "Удалить", class: "btn btn-danger" %>
-<% end %>
-<%= link_to "Назад", test_questions_path(@question.test), class: "btn btn-secondary" %>
+<p>
+  <strong>Вопрос</strong>
+  <%= @question.body %>
+</p>
+<table>
+  <tr>
+    <th>Ответы:</th>
+    <th colspan="3">Действия</th>
+  </tr>
+</table>
+<%= link_to 'Редактировать', edit_question_path(@question) %>
+<%= link_to 'Назад', questions_path %>
