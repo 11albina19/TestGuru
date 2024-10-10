@@ -1,7 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
+  background-color: #17252A;
+  /*font-family: CodeNext-Trial-ExtraBold;*/
+  font-size: 18px;
+  color: #ffffff;
   margin: 0;
-  padding: 0; 
+  padding: 30px;
 }
 
 header {
@@ -37,8 +40,11 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #FEFFFF;
+  color: #17252A;
+  left: 0;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -60,4 +66,13 @@ footer {
 
 .social a {
   margin-right: 10px;
+}
+
+a {
+  color: #3AAFA9;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3AAFA9;
 }
