@@ -8,4 +8,9 @@ class User < ApplicationRecord
   def user_tests_at_level(level)
     passed_tests.where(level:)
   end
+
+  def test_passage(test)
+    results.order(id: :desc).find_by(test_id: test.id)
+    Rails.logger.debug "!!!!! test_passage: #{results.order(id: :desc).find_by(test_id: test.id)}"
+  end
 end

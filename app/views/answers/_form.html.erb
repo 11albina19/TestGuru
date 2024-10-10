@@ -1,0 +1,18 @@
+<%= form_with model: [@question, @answer], local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
+  <p>
+    <%= form.label :body, 'Ответ'  %>
+    <%= form.text_field :body, id: :answers_body %>
+  </p>
+  <p>
+    <%= form.label :correct, 'Корректность'  %>
+    <%= form.check_box :correct, id: :answers_correct %>
+  </p>
+  <p>
+    <%= form.label :question_id, 'Вопрос'  %>
+    <%= form.collection_select :question_id, Question.all, :id, :body, prompt: true %>
+  </p>
+  <div>
+    <%= form.submit 'Сохранить'%>
+  </div>
+<% end %>

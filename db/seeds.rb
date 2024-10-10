@@ -58,9 +58,9 @@ answers_data = [
 Answer.create!(answers_data)
 
 result_data = [
-  { user: users[0], test: tests[0] },
-  { user: users[1], test: tests[1] },
-  { user: users[1], test: tests[3] }
+  { user: users[0], test: tests[0], current_question: questions[0], correct_question: 3},
+  { user: users[1], test: tests[1], current_question: questions[0], correct_question: 2},
+  { user: users[1], test: tests[3], current_question: questions[0], correct_question: 5}
 ]
 
 Result.create!(result_data)
