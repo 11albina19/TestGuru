@@ -61,7 +61,7 @@ footer {
 }
 
 .contact p:last-child {
-  margin-bottom: 1em; 
+  margin-bottom: 1em;
 }
 
 .social a {
@@ -75,4 +75,12 @@ a {
 
 a:visited {
   color: #3AAFA9;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.next-button {
+  margin-top: 200px;
 }

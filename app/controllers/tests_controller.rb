@@ -23,8 +23,7 @@ class TestsController < ApplicationController
     if @test.save
       redirect_to @test
     else
-      #Rails.logger.debug "пример на будущее #{@test.errors.full_messages}, #{test_params.inspect}""
-      render :new #не весь код метода, только отрендерить шаблон
+      render :new
     end
   end
 
@@ -42,11 +41,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    Rails.logger.debug "!!!debug: #{@user.inspect}"
-    Rails.logger.debug "!!!debug: #{@test.inspect}"
     @user.passed_tests.push(@test)
-    Rails.logger.debug "!!!debug 3: #{@user.test_passage(@test).inspect}"
-    redirect_to @user.test_passage(@test)
+    redirect_to @user.return_result(@test)
   end
 
   private

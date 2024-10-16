@@ -9,7 +9,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_quantity_answers
-    Rails.logger.debug "1!!Содержимое question: #{question.inspect}"
     errors.add(:answers, 'quantity of answers from 1 to 4') if question.answers.count >= 4
   end
 end
