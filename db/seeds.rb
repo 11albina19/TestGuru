@@ -36,7 +36,8 @@ questions = Question.create!([
                                { body: 'Что такое ветка?', test: tests[3] },
                                { body: 'Что делает команда git add?', test: tests[3] },
                                { body: 'Что такое миграция?', test: tests[4] },
-                               { body: 'Как переименовать локальную ветку, если вы находитесь на ней?', test: tests[3] }
+                               { body: 'Как переименовать локальную ветку, если вы находитесь на ней?', test: tests[3] },
+                               { body: 'Что делает индекс в базе данных?', test: tests[1] }
                              ])
 
 answers_data = [
@@ -83,7 +84,11 @@ answers_data = [
 
   { body: 'git branch -m new_name', correct: true, question: questions[6] },
   { body: 'git branch -m old_name new_name', correct: false, question: questions[6] },
-  { body: 'git update-branch --rename old_name new_name', correct: true, question: questions[6] }
+  { body: 'git update-branch --rename old_name new_name', correct: false, question: questions[6] },
+
+  { body: 'Повышает производительность запросов за счет быстрого поиска строк по ключу', correct: true, question: questions[7] },
+  { body: 'Снижает скорость выполнения запросов', correct: false, question: questions[7] },
+  { body: 'Автоматически удаляет неиспользуемые данные для ускорения запросов', correct: false, question: questions[7] }
 
 ]
 
