@@ -35,7 +35,8 @@ questions = Question.create!([
                                { body: 'Чем жесткая ссылка отличается от символической?', test: tests[2] },
                                { body: 'Что такое ветка?', test: tests[3] },
                                { body: 'Что делает команда git add?', test: tests[3] },
-                               { body: 'Что такое миграция?', test: tests[4] }
+                               { body: 'Что такое миграция?', test: tests[4] },
+                               { body: 'Как переименовать локальную ветку, если вы находитесь на ней?', test: tests[3] }
                              ])
 
 answers_data = [
@@ -78,7 +79,12 @@ answers_data = [
     correct: false, question: questions[5] },
   {
     body: 'Миграции - это переработка кода, процесс изменения внутренней структуры программы, в ходе которой происходит перенос кода из одних классов в другие', correct: false, question: questions[5]
-  }
+  },
+
+  { body: 'git branch -m new_name', correct: true, question: questions[6] },
+  { body: 'git branch -m old_name new_name', correct: false, question: questions[6] },
+  { body: 'git update-branch --rename old_name new_name', correct: true, question: questions[6] }
+
 ]
 
 Answer.create!(answers_data)
