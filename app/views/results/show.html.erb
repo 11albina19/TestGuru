@@ -1,6 +1,7 @@
-<h1>Прохождение теста: <%= @result.test.title %> </h1>
+<h2>Прохождение теста: <%= @result.test.title %> </h2>
+<h4>Всего вопросов: <%= amount_questions(@result.test)%> </h4>
 <b>
-  <%= @result.current_question.body %>
+  <%= @result.test.questions.index(@result.current_question) + 1%>. <%= @result.current_question.body %>
 </b>
 <%= form_with url: result_path(@result), local: true, method: :put do |form| %>
   <%= form.fields_for :answer_ids do |f| %>
@@ -11,5 +12,5 @@
       </div>
     <% end %>
   <% end %>
-  <%= form.submit 'Next' %>
+  <%= form.submit 'Дальше' %>
 <% end %>

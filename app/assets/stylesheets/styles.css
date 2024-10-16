@@ -84,3 +84,7 @@ a:visited {
 .next-button {
   margin-top: 200px;
 }
+
+.text-success { color: green; }
+
+.text-fail { color: red; }
