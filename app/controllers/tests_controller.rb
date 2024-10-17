@@ -1,5 +1,6 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show edit destroy update]
+  before_action :find_test, only: %i[show edit destroy update start]
+
   def index
     @tests = Test.all
   end
@@ -22,8 +23,7 @@ class TestsController < ApplicationController
     if @test.save
       redirect_to @test
     else
-      #Rails.logger.debug "пример на будущее #{@test.errors.full_messages}, #{test_params.inspect}""
-      render :new #не весь код метода, только отрендерить шаблон
+      render :new
     end
   end
 
@@ -38,6 +38,12 @@ class TestsController < ApplicationController
   def destroy
     @test.destroy
     redirect_to tests_path
+  end
+
+  def start
+    @user = User.first
+    @user.passed_tests.push(@test)
+    redirect_to @user.return_result(@test)
   end
 
   private
