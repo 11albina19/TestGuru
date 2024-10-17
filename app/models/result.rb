@@ -5,14 +5,23 @@ class Result < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  SUCCESS_RATIO = 85.freeze
+
   def completed?
     current_question.nil?
   end
 
+  def success_rate
+    100 / test.questions.count * correct_question
+  end
+
+  def successful?
+    success_rate >= SUCCESS_RATIO
+  end
+
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
-      #self.correct_question += 1
-      self.correct_question = self.correct_question + 1
+      self.correct_question += 1
     end
 
     self.current_question = next_question
@@ -26,10 +35,7 @@ class Result < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-      correct_answers_count == answer_ids.count
+    correct_answers.ids.sort == answer_ids.map(&:to_i).sort
   end
 
   def correct_answers
