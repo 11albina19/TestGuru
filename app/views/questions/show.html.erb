@@ -5,7 +5,8 @@
 <table>
   <tr>
     <th>Ответы:</th>
-    <th colspan="3">Действия</th>
+    <%= link_to 'Новый ответ', new_question_answer_path(@question) %>
+    <ol><%= render @question.answers %></ol>
   </tr>
 </table>
 <%= link_to 'Редактировать', edit_question_path(@question) %>
