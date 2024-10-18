@@ -12,7 +12,7 @@ class Result < ApplicationRecord
   end
 
   def success_rate
-    100 / test.questions.count * correct_question
+    (100 / test.questions.count.to_f * correct_question).round(2)
   end
 
   def successful?

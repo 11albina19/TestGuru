@@ -9,7 +9,8 @@ class ResultsController < ApplicationController
   end
 
   def update
-    @result.accept!(params[:answer_ids].values)
+    params_answer_ids = params[:answer_ids].present? ? params[:answer_ids] : Hash.new(0)
+    @result.accept!(params_answer_ids.values)
 
     if @result.completed?
       redirect_to result_result_path(@result)
