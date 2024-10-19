@@ -9,14 +9,12 @@ class ResultsController < ApplicationController
   end
 
   def update
-    params_answer_ids = params[:answer_ids].present? ? params[:answer_ids] : Hash.new(0)
-    @result.accept!(params_answer_ids.values)
+    return redirect_to result_path(@result) unless params[:answer_ids]
+    @result.accept!(params[:answer_ids].values)
 
     if @result.completed?
       redirect_to result_result_path(@result)
     else
-      #@result.reload
-      #render :show //так не обновляется страница
       redirect_to result_path(@result)
     end
   end

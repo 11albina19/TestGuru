@@ -5,7 +5,7 @@ class Result < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
-  SUCCESS_RATIO = 85.freeze
+  SUCCESS_RATIO = 85
 
   def completed?
     current_question.nil?
