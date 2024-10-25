@@ -9,8 +9,7 @@ class ResultsController < ApplicationController
   end
 
   def update
-    return redirect_to result_path(@result) unless params[:answer_ids]
-    @result.accept!(params[:answer_ids].values)
+    @result.accept!(params[:answer_ids])
 
     if @result.completed?
       redirect_to result_result_path(@result)

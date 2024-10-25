@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   resources :results, only: %i[show update] do
     member do
       get :result #controller method name
-      get :next_question
     end
   end
 end

@@ -1,16 +1,14 @@
 <h2>Прохождение теста: <%= @result.test.title %> </h2>
-<h4>Всего вопросов: <%= amount_questions(@result.test)%> </h4>
+<h4>Всего вопросов: <%= amount_questions(@result.test) %> </h4>
 <b>
-  <%= @result.test.questions.index(@result.current_question) + 1%>. <%= @result.current_question.body %>
+  <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
 </b>
 <%= form_with url: result_path(@result), local: true, method: :put do |form| %>
-  <%= form.fields_for :answer_ids do |f| %>
-    <% @result.current_question.answers.each do |answer| %>
-      <div class="form-check">
-        <%= f.check_box answer.id, { id: "answer_#{answer.id}", class: 'form-check-input' }, answer.id, nil %>
-        <%= f.label "answer_#{answer.id}", answer.body, class: 'form-check-label' %>
-      </div>
-    <% end %>
+  <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body, include_hidden: false do |f| %>
+    <div class="form-check">
+      <%= f.check_box id: "answer_#{f.object.id}", class: 'form-check-input' %>
+      <%= f.label  %>
+    </div>
   <% end %>
-  <%= form.submit 'Дальше'%>
+  <%= form.submit 'Дальше' %>
 <% end %>
