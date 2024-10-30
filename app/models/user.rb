@@ -8,4 +8,8 @@ class User < ApplicationRecord
   def user_tests_at_level(level)
     passed_tests.where(level:)
   end
+
+  def return_result(test)
+    results.order(id: :desc).find_by(test_id: test.id)
+  end
 end
