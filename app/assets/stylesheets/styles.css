@@ -88,3 +88,17 @@ a:visited {
 .text-success { color: green; }
 
 .text-fail { color: red; }
+
+.flash{
+  border: 2px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.flash.alert {
+  border-color: #ef2727;
+}
+
+.nav.user {
+  text_align: right;
+}
