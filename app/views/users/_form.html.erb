@@ -1,9 +1,11 @@
 <%= form_with model: @user, local: true do |form| %>
+  <%#= binding.pry %>
+  <%= flash_messages('alert') if flash[:alert] %>
   <%= render 'shared/errors', resource: @user %>
 
   <p>
-    <%= form.label :mail, 'Почта'%>
-    <%= form.text_field :mail, id: :user_mail %>
+    <%= form.label :email, 'Почта'%>
+    <%= form.text_field :email, id: :user_mail %>
   </p>
 
   <p>

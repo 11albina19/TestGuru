@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to tests_path
     else
+      flash.now[:alert] = "Почта не корректна"
       render :new
     end
   end
