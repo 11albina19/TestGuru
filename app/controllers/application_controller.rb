@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user,
                 :logged_in?
 
+  before_action :authenticate_user!
+
   private
 
   def authenticate_user!
@@ -14,6 +16,7 @@ class ApplicationController < ActionController::Base
     end
 
     cookies[:email] = current_user&.mail
+    cookies[:user_id] = current_user&.id
   end
 
   def current_user
@@ -22,5 +25,12 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
+  end
+
+  def log_out
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+    session.delete(:user_id)
+    @current_user = nil
   end
 end
