@@ -12,8 +12,12 @@ class SessionsController < ApplicationController
       redirect_to cookies[:return_to] || tests_path
       cookies.delete(:return_to)
     else
-      flash.now[:alert] = 'Вы зарегистрированы? Подтвердите, пожалуйста, свои почту и пароль'
-      render :new
+      flash.now[:alert] = 'Вы зарегистрированы? Проверьте, пожалуйста, свои почту и пароль'
+      render turbo_stream: turbo_stream.replace(
+        'flash-messages',
+        partial: 'layouts/flash',
+        locals: { flash: flash }
+      )
     end
   end
 

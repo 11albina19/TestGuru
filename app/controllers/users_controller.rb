@@ -11,7 +11,11 @@ class UsersController < ApplicationController
       redirect_to tests_path
     else
       flash.now[:alert] = "Почта не корректна"
-      render :new
+      render turbo_stream: turbo_stream.replace(
+        'flash-messages',
+        partial: 'layouts/flash',
+        locals: { flash: flash }
+      )
     end
   end
 

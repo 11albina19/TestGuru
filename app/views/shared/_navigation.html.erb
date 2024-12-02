@@ -1,0 +1,13 @@
+<div class="navigation">
+  <%= link_to "Тест гуру", tests_path %>
+  <% if logged_in? %>
+    <span>Welcome, <b><%= current_user.email %></b> Guru</span>
+    <%= link_to 'Выйти', logout_path, method: :delete, class: 'btn btn-danger' %>
+  <% else %>
+    <%= link_to "Войти", login_path%>
+    <%= link_to "Зарегистрироваться", signup_path%>
+  <% end %>
+</div>
+<div id="flash-messages">
+<%= flash_messages('alert') if flash[:alert] %>
+</div>
