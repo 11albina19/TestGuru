@@ -19,11 +19,8 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
+      redirect_to login_path, alert: 'Вы зарегистрированы? Проверьте, пожалуйста, свои почту и пароль'
     end
-
-    cookies[:email] = current_user&.email
-    cookies[:user_id] = current_user&.id
   end
 
   def current_user
@@ -32,12 +29,5 @@ class ApplicationController < ActionController::Base
 
   def logged_in?
     current_user.present?
-  end
-
-  def log_out
-    cookies.delete(:user_id)
-    cookies.delete(:remember_token)
-    session.delete(:user_id)
-    @current_user = nil
   end
 end

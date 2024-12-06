@@ -21,8 +21,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
-    log_out if logged_in?
+  def delete
+    reset_session if logged_in?
     redirect_to tests_path
   end
 end
