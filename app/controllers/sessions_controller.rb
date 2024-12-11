@@ -9,8 +9,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to cookies[:return_to] || tests_path
-      cookies.delete(:return_to)
+      redirect_to cookies.delete(:return_to) || tests_path
     else
       flash.now[:alert] = 'Вы зарегистрированы? Проверьте, пожалуйста, свои почту и пароль'
       render turbo_stream: turbo_stream.replace(
@@ -21,8 +20,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def delete
-    reset_session if logged_in?
+  def destroy
+    reset_session
     redirect_to tests_path
   end
 end
