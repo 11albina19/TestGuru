@@ -12,6 +12,7 @@ class ResultsController < ApplicationController
     @result.accept!(params[:answer_ids])
 
     if @result.completed?
+      TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_result_path(@result)
     else
       redirect_to result_path(@result)
