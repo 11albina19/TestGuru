@@ -5,9 +5,9 @@
 <table>
   <tr>
     <th>Ответы:</th>
-    <%= link_to 'Новый ответ', new_question_answer_path(@question) %>
+    <%= link_to 'Новый ответ', new_admin_test_question_answer_path(@question.test, @question) %>
     <ol><%= render @question.answers %></ol>
   </tr>
 </table>
-<%= link_to 'Редактировать', edit_question_path(@question) %>
+<%= link_to 'Редактировать', edit_admin_test_question_path(@question.test, @question) %>
 <%= link_to 'Назад', admin_test_path(@question.test)%>

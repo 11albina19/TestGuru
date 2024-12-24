@@ -1,0 +1,8 @@
+<li>
+  <%= answer.body %><br>
+  <%= link_to 'Открыть', admin_test_question_answer_path(@question.test, @question, answer) %> |
+  <%= link_to 'Редактировать', edit_admin_test_question_answer_path(@question.test, @question, answer)%> |
+  <%= link_to 'Удалить',
+              admin_test_question_answer_path(@question.test, @question, answer),
+              data: { turbo_method: :delete, turbo_confirm: "Вы уверены?" } %>
+</li>
