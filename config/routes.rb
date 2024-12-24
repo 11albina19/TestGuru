@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :admin do
+  namespace :admins do
     resources :tests do
       resources :questions, except: :index do
         resources :answers, except: :index

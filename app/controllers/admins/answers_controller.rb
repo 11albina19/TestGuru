@@ -1,6 +1,6 @@
 module Admins
   class AnswersController < Admins::BaseController
-    before_action :find_question, only: %i[new create]
+    before_action :find_question, only: %i[new edit create]
     before_action :set_answer, only: %i[show edit update destroy]
 
     def show
@@ -25,7 +25,7 @@ module Admins
 
     def update
       if @answer.update(answer_params)
-        redirect_to @answer
+        redirect_to admins_test_question_answers_path
       else
         render :edit
       end
@@ -33,7 +33,7 @@ module Admins
 
     def destroy
       @answer.destroy
-      redirect_to @answer.question
+      redirect_to admins_test_question_path(@answer.question.test, @answer.question)
     end
 
     private

@@ -1,7 +1,7 @@
 module Admins
   class QuestionsController < Admins::BaseController
     before_action :find_test, only: %i[new create]
-    before_action :find_question, only: %i[show destroy edit update]
+    before_action :find_question, only: %i[new show destroy edit update]
 
     def show
     end

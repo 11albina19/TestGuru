@@ -2,11 +2,11 @@
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
   <td><%= amount_questions(test) %></td>
-  <td><%= link_to 'Открыть', admin_test_path(test) %></td>
-  <td><%= link_to 'Редактировать', edit_admin_test_path(test) %></td>
+  <td><%= link_to 'Открыть', admins_test_path(test) %></td>
+  <td><%= link_to 'Редактировать', edit_admins_test_path(test) %></td>
   <td>
     <%= link_to 'Удалить',
-                admin_test_path(test),
+                admins_test_path(test),
                 data: { turbo_method: :delete, turbo_confirm: "Вы уверены?" }%>
   </td>
 </tr>
