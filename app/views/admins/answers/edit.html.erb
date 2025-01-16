@@ -1,0 +1,10 @@
+<h1>Редактирование ответа</h1>
+<p>
+  <%= @answer.question.body %>
+</p>
+
+<%= render "form", answer: @answer %>
+<div>
+  <%= link_to "Открыть этот ответ", admins_test_question_answer_path(@answer) %> |
+  <%= link_to "Вернуться к ответам", admins_test_question_answers_path(@test, @question)%>
+</div>

@@ -1,13 +1,14 @@
 <div class="navigation">
   <%= link_to "Тест гуру", tests_path %>
-  <% if logged_in? %>
-    <span>Welcome, <b><%= current_user.email %></b> Guru</span>
-    <%= link_to 'Выйти', logout_path, method: :delete, data: { turbo_method: :delete}, class: 'btn btn-danger' %>
+  <% if user_signed_in? %>
+    <span>Добро пожаловать, <b><%= current_user.email %></b></span>
+    <%= link_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: 'btn btn-danger' %>
   <% else %>
-    <%= link_to "Войти", login_path%>
-    <%= link_to "Зарегистрироваться", signup_path%>
+    <%= link_to "Войти", new_user_session_path%>
+    <%= link_to "Зарегистрироваться", new_user_registration_path%>
   <% end %>
 </div>
+<%= render 'shared/flash' %>
 <div id="flash-messages">
 <%= flash_messages('alert') if flash[:alert] %>
 </div>
