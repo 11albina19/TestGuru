@@ -1,8 +1,8 @@
 <div class="navigation">
-  <%= link_to "Тест гуру", tests_path %>
+  <%= link_to t('.name'), tests_path %>
   <% if user_signed_in? %>
-    <span>Добро пожаловать, <b><%= current_user.email %></b></span>
-    <%= link_to 'Выйти', destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: 'btn btn-danger' %>
+    <span><%= t('.welcome')%><b><%= current_user.email %></b></span>
+    <%= link_to t('.logout'), destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: 'btn btn-danger' %>
   <% else %>
     <%= link_to "Войти", new_user_session_path%>
     <%= link_to "Зарегистрироваться", new_user_registration_path%>

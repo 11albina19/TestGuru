@@ -1,6 +1,6 @@
-<h2><%= @result.test.title %> завершен!</h2>
-<h3>Правильных ответов: <%= @result.correct_question%>,
-  процент успеха: <span class="<%= return_color(@result) %>"> <%= @result.success_rate %>
+<h2><%= @result.test.title %> <%= t('results.result.completed') %></h2>
+<h3><%= t('.correct_question')%><%= @result.correct_question%>,
+  <%= t('.success_rate')%> <span class="<%= return_color(@result) %>"> <%= @result.success_rate %>
 </span> </h3>
 <h3><%= return_message(@result)%></h3>
-<%= link_to 'Назад к тестам', tests_path %>
+<%= link_to t('.back'), tests_path %>

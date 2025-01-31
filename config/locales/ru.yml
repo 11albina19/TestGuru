@@ -1,16 +1,49 @@
 ru:
-  hello: "Привет мир!"
+  hello: "Привет, мир!"
 
   helpers:
+    application:
+      github: "Код проекта на github"
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: "Создать тест"
+        update: "Обновить тест"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    results:
+      successfully: "Тест успешно пройден"
+      failed: "Тест не пройден"
+
+  admins:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
+
+  results:
+    result:
+      correct_question: "Правильных ответов: "
+      success_rate: "процент успеха: "
+      back: "Назад к тестам"
+      completed: " завершен!"
+    show:
+      title: "Прохождение теста: "
+      total: "Всего вопросов: "
+      next: "Далее"
+
+  shared:
+    navigation:
+      name: "ТестГуру"
+      welcome: "Добро пожаловать, "
+      logout: "Выйти"
+    footer:
+      author: "Сафина Альбина"
+      description: "Онлайн-викторины для рекламы бренда или проверки знаний"
+      project: "Учебный проект в онлайн школе Thinknetica"
 
   tests:
     index:
@@ -19,10 +52,5 @@ ru:
       level: "Уровень"
       questions: "Вопросы"
       actions: "Действия"
-
-  admin:
-    tests:
-      create:
-        success: "Тест успешно создан"
-      index:
-        header: "Доступные тесты"
+    test:
+      start: "Старт"

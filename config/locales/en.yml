@@ -1,41 +1,56 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
-ru:
+en:
   hello: "Hello world!"
+
+  helpers:
+    application:
+      github: "Project code on github"
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    results:
+      successfully: "Test passed successfully"
+      failed: "Test failed"
+
+  admins:
+    tests:
+      create:
+        success: "Test created successfully"
+      index:
+        header: "Available tests"
+
+  results:
+    result:
+      correct_question: "Correct answers:: "
+      success_rate: "success rate: "
+      back: "Back to tests"
+      completed: " completed!"
+    show:
+      title: "Taking the test: "
+      total: "Total questions: "
+      next: "Next"
+
+  shared:
+    navigation:
+      name: "TestGuru"
+      welcome: "Welcome, "
+      logout: "sign out"
+    footer:
+      author: "Safina Albina"
+      description: "Online quizzes to advertise a brand or test your knowledge"
+      project: "Educational project in online school Thinknetica"
 
   tests:
     index:
-      header: "Доступные тесты"
-      title: "Titleee"
+      header: "Available tests"
+      title: "Title"
       level: "Level"
       questions: "Questions"
       actions: "Actions"
+    test:
+      start: "Start"
