@@ -72,6 +72,8 @@ en:
       name: "TestGuru"
       welcome: "Welcome, "
       logout: "sign out"
+      login: "Login"
+      register: "Register"
     footer:
       author: "Safina Albina"
       description: "Online quizzes to advertise a brand or test your knowledge"

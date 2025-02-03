@@ -4,8 +4,8 @@
     <span><%= t('.welcome')%><b><%= current_user.email %></b></span>
     <%= link_to t('.logout'), destroy_user_session_path, method: :delete, data: { turbo_method: :delete}, class: 'btn btn-danger' %>
   <% else %>
-    <%= link_to "Войти", new_user_session_path%>
-    <%= link_to "Зарегистрироваться", new_user_registration_path%>
+    <%= link_to t('.login'), new_user_session_path%>
+    <%= link_to t('.register'), new_user_registration_path%>
   <% end %>
 </div>
 <%= render 'shared/flash' %>
