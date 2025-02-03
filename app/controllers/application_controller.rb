@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def default_url_options
-    { lang: I18n.locale }
+    #binding.pry
+    { lang: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
   def after_sign_in_path_for(resource)

@@ -18,11 +18,43 @@ ru:
       failed: "Тест не пройден"
 
   admins:
+    nav:
+      title: "ТестГуру панель администратора"
+      welcome: "Добро пожаловать, "
+      logout: "Выйти"
     tests:
-      create:
-        success: "Тест успешно создан"
+      form:
+        title: "Заголовок"
+        level: "Уровень"
+        category: "Категория"
+        create: "Создать тест"
+        back: "Назад"
+      test:
+        open: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+      edit:
+        title: "Редактировать тест"
       index:
         header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        create: "Создать тест"
+      new:
+        title: "Создать новый тест"
+      create:
+        success: "Тест успешно создан"
+      show:
+        title: "Заголовок"
+        level: "Уровень"
+        content: "Тест содержит вопросы"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать тест"
+        add: "Добавить вопрос"
 
   results:
     result:

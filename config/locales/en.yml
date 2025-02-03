@@ -18,11 +18,43 @@ en:
       failed: "Test failed"
 
   admins:
+    nav:
+      title: "TestGuru admin panel"
+      welcome: "Welcome, "
+      logout: "sign out"
     tests:
-      create:
-        success: "Test created successfully"
+      form:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        create: "Create test"
+        back: "Back"
+      test:
+        open: "Open"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you sure?"
+      edit:
+        title: "Edit test"
       index:
         header: "Available tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        create: "Create a test"
+      new:
+        title: "Create a new test"
+      create:
+        success: "Test created successfully"
+      show:
+        title: "Title"
+        level: "Level"
+        content: "The test contains questions"
+        actions: "Actions"
+        back: "Back"
+        edit: "Edit test"
+        add: "Add a question"
 
   results:
     result:

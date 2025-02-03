@@ -1,19 +1,19 @@
 <p>
-  <strong>Название:</strong>
+  <strong><%= t('.title')%></strong>
   <h2><%= @test.title %></h2>
 </p>
 <p>
-  <strong>Уровень:</strong>
+  <strong><%= t('.level')%></strong>
   <%= @test.level %>
 </p>
 <table>
   <tr>
-    <th>Тест содержит вопросы</th>
-    <th colspan="3">Действия</th>
+    <th><%= t('.content')%></th>
+    <th colspan="3"><%= t('.actions')%></th>
   </tr>
   <%= render @questions %>
   <%= render partial: 'admins/questions/question', collection: @test.questions %>
 </table>
-<%= link_to 'Назад', admins_tests_path %>
-<%= link_to 'Редактировать тест', edit_admins_test_path(@test) %>
-<%= link_to 'Добавить вопрос', new_admins_test_question_path(@test) %>
+<%= link_to t('.back'), admins_tests_path %>
+<%= link_to t('.edit'), edit_admins_test_path(@test) %>
+<%= link_to t('.add'), new_admins_test_question_path(@test) %>
