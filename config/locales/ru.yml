@@ -1,33 +1,90 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 ru:
   hello: "Привет, мир!"
+
+  helpers:
+    application:
+      github: "Код проекта на github"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    results:
+      successfully: "Тест успешно пройден"
+      failed: "Тест не пройден"
+
+  admins:
+    nav:
+      title: "ТестГуру панель администратора"
+      welcome: "Добро пожаловать, "
+      logout: "Выйти"
+    tests:
+      form:
+        title: "Заголовок"
+        level: "Уровень"
+        category: "Категория"
+        create: "Создать тест"
+        back: "Назад"
+      test:
+        open: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+      edit:
+        title: "Редактировать тест"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        create: "Создать тест"
+      new:
+        title: "Создать новый тест"
+      create:
+        success: "Тест успешно создан"
+      show:
+        title: "Заголовок"
+        level: "Уровень"
+        content: "Тест содержит вопросы"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать тест"
+        add: "Добавить вопрос"
+
+  results:
+    result:
+      correct_question: "Правильных ответов: "
+      success_rate: "процент успеха: "
+      back: "Назад к тестам"
+      completed: " завершен!"
+    show:
+      title: "Прохождение теста: "
+      total: "Всего вопросов: "
+      next: "Далее"
+
+  shared:
+    navigation:
+      name: "ТестГуру"
+      welcome: "Добро пожаловать, "
+      logout: "Выйти"
+      login: "Войти"
+      register: "Зарегистрироваться"
+    footer:
+      author: "Сафина Альбина"
+      description: "Онлайн-викторины для рекламы бренда или проверки знаний"
+      project: "Учебный проект в онлайн школе Thinknetica"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Старт"

@@ -1,5 +1,5 @@
-<h2>Прохождение теста: <%= @result.test.title %> </h2>
-<h4>Всего вопросов: <%= amount_questions(@result.test) %> </h4>
+<h2><%= t('.title') %><%= @result.test.title %> </h2>
+<h4><%= t('.total') %><%= amount_questions(@result.test) %> </h4>
 <b>
   <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
 </b>
@@ -10,5 +10,5 @@
       <%= f.label  %>
     </div>
   <% end %>
-  <%= form.submit 'Дальше' %>
+  <%= form.submit t('.next') %>
 <% end %>

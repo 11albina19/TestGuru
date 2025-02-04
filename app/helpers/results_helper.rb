@@ -10,9 +10,9 @@ module ResultsHelper
 
   def return_message(result)
     if result.successful?
-      'Тест успешно пройден'
+      t('helpers.results.successfully')
     else
-      'Тест не пройден'
+      t('helpers.results.failed')
     end
   end
 end

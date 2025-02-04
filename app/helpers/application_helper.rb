@@ -16,7 +16,7 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    link_to 'Код проекта на github', "https://github.com/#{author}/#{repo}", target: '_blank'
+    link_to t('helpers.application.github'), "https://github.com/#{author}/#{repo}", target: '_blank'
   end
 
   def flash_messages(name)

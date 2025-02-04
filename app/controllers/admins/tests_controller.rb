@@ -23,7 +23,7 @@ module Admins
       @test = Test.new(test_params)
       @test.author = current_user
       if @test.save
-        redirect_to admins_test_path(@test)
+        redirect_to admins_test_path(@test), notice: t('.success')
       else
         render :new
       end
