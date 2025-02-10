@@ -55,6 +55,8 @@ gem 'devise', '~> 4.0'
 
 gem 'rails-i18n', '~> 7.0.0'
 
+gem 'bootstrap', '~> 5.0.0.beta'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
