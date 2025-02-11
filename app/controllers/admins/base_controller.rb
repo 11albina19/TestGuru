@@ -1,6 +1,5 @@
 module Admins
   class BaseController < ApplicationController
-
     layout 'admins'
 
     before_action :admin_required!

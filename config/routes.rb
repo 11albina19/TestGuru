@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
@@ -12,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :results, only: %i[show update] do
     member do
-      get :result #controller method name
+      get :result # controller method name
     end
   end
 

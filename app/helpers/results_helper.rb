@@ -1,5 +1,4 @@
 module ResultsHelper
-
   def return_color(result)
     if result.successful?
       'text-success'
