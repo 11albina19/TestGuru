@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-light">
-  <%= link_to 'TestGuru', root_path, class: 'navbar-brand'%>
+  <%= link_to t('.name'), root_path, class: 'navbar-brand'%>
   <span class="nav-admin title"><%=t('.title')%> </span>
 
   <nav class="d-flex align-items-center gap-3">
     <%=t('.welcome')%> <b class="nav-admin user-email"><%= current_user.email %></b>
-    <%= button_to 'Выйти', destroy_user_session_path, method: :delete, class: "btn btn-outline-danger btn-sm" %>
+    <%= button_to t('.logout'), destroy_user_session_path, method: :delete, class: "btn btn-outline-danger btn-sm" %>
   </nav>
 </nav>

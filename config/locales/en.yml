@@ -22,6 +22,7 @@ en:
       title: "TestGuru admin panel"
       welcome: "Welcome, "
       logout: "sign out"
+      name: "TestGuru"
     tests:
       form:
         title: "Title"
@@ -74,6 +75,7 @@ en:
       logout: "sign out"
       login: "Login"
       register: "Register"
+      panel: "Panel admin"
     footer:
       author: "Safina Albina"
       description: "Online quizzes to advertise a brand or test your knowledge"
