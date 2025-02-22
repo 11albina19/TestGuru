@@ -41,8 +41,6 @@ module Admins
 
     def find_question
       @question = Question.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      render plain: 'Question not found'
     end
 
     def question_params

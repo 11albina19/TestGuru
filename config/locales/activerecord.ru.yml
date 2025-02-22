@@ -1,11 +1,17 @@
 ru:
   activerecord:
     models:
-      test: "Тест"
+      test:
 
     attributes:
       test:
         title: "Название"
     errors:
+      models:
+        test:
+          attributes:
+            level:
+              numericality: "Уровень теста может быть только положительным целым числом"
+              greater_than: "Уровень теста может быть только положительным целым числом"
       messages:
         blank: "не может быть пустым"

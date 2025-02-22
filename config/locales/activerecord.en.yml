@@ -1,8 +1,15 @@
 en:
   activerecord:
     models:
-      test: "Test"
+      test:
 
     attributes:
       test:
         title: "Title"
+    errors:
+      models:
+        test:
+          attributes:
+            level:
+              numericality: "The Test Level can only be a manifestation of integers"
+              greater_than: "The Test Level can only be a manifestation of integers"
