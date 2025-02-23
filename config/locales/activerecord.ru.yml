@@ -8,10 +8,22 @@ ru:
         title: "Название"
     errors:
       models:
+        admin:
+          attributes:
+        answer:
+          attributes:
+            answers:
+              quantity_limit: "Количество ответов должно быть от 1 до 4"
+        category:
+        question:
+        result:
         test:
           attributes:
             level:
               numericality: "Уровень теста может быть только положительным целым числом"
               greater_than: "Уровень теста может быть только положительным целым числом"
+        user:
+          email:
+            invalid: "Некорректный формат"
       messages:
         blank: "не может быть пустым"
