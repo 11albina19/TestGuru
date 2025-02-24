@@ -1,14 +1,23 @@
-<h2><%= t('.title') %><%= @result.test.title %> </h2>
-<h4><%= t('.total') %><%= amount_questions(@result.test) %> </h4>
-<b>
-  <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
-</b>
-<%= form_with url: result_path(@result), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body, include_hidden: false do |f| %>
-    <div class="form-check">
-      <%= f.check_box id: "answer_#{f.object.id}", class: 'form-check-input' %>
-      <%= f.label  %>
+<div class="container mt-3">
+  <h2><%= t('.title') %> <%= @result.test.title %></h2>
+  <h4><%= t('.total') %> <%= amount_questions(@result.test) %></h4>
+
+  <div>
+    <b class="d-block fs-5">
+      <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
+    </b>
+  </div>
+  <%= form_with url: result_path(@result), local: true, method: :put do |form| %>
+    <div class="mb-3">
+      <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body, include_hidden: false do |f| %>
+        <div class="form-check mb-1">
+          <%= f.check_box id: "answer_#{f.object.id}", class: 'form-check-input' %>
+          <%= f.label class: "form-check-label" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="d-grid mb-2">
+      <%= form.submit t('.next'), class: "btn btn-primary" %>
     </div>
   <% end %>
-  <%= form.submit t('.next') %>
-<% end %>
+</div>

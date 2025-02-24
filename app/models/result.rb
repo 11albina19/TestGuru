@@ -20,9 +20,7 @@ class Result < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if correct_answer?(answer_ids)
-      self.correct_question += 1
-    end
+    self.correct_question += 1 if correct_answer?(answer_ids)
 
     self.current_question = next_question
     save!

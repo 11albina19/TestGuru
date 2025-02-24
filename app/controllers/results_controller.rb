@@ -1,12 +1,9 @@
 class ResultsController < ApplicationController
-
   before_action :set_result, only: %i[show update result]
 
   def show; end
 
-  def result
-
-  end
+  def result; end
 
   def update
     @result.accept!(params[:answer_ids])

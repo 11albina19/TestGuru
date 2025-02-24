@@ -3,16 +3,13 @@ module Admins
     before_action :find_test, only: %i[new create]
     before_action :find_question, only: %i[new show destroy edit update]
 
-    def show
-    end
+    def show; end
 
     def new
       @question = @test.questions.new
     end
 
-    def edit
-
-    end
+    def edit; end
 
     def create
       @question = @test.questions.new(question_params)
@@ -44,8 +41,6 @@ module Admins
 
     def find_question
       @question = Question.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-      render plain: "Question not found"
     end
 
     def question_params

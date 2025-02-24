@@ -1,8 +1,29 @@
 en:
   activerecord:
     models:
-      test: "Test"
+      test:
 
     attributes:
       test:
         title: "Title"
+    errors:
+      models:
+        admin:
+          attributes:
+        answer:
+          attributes:
+            answers:
+              quantity_limit: "Quantity of answers from 1 to 4"
+        category:
+        question:
+        result:
+        test:
+          attributes:
+            level:
+              numericality: "The Test Level can only be a manifestation of integers"
+              greater_than: "The Test Level can only be a manifestation of integers"
+        user:
+          email:
+            invalid: "Incorrect format"
+          messages:
+            blank: "can't be empty"

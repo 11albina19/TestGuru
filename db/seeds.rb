@@ -36,7 +36,8 @@ questions = Question.create!([
                                { body: 'Что такое ветка?', test: tests[3] },
                                { body: 'Что делает команда git add?', test: tests[3] },
                                { body: 'Что такое миграция?', test: tests[4] },
-                               { body: 'Как переименовать локальную ветку, если вы находитесь на ней?', test: tests[3] },
+                               { body: 'Как переименовать локальную ветку, если вы находитесь на ней?',
+                                 test: tests[3] },
                                { body: 'Что делает индекс в базе данных?', test: tests[1] }
                              ])
 
@@ -56,9 +57,12 @@ answers_data = [
 и не зависят друг от друга', correct: true, question: questions[1] },
   { body: 'В таблице запрещено использовать внешние ключи', correct: false, question: questions[1] },
 
-  { body: 'Жесткую ссылку можно создать только на каталог, а символическую — на любой файл', correct: false, question: questions[2] },
-  { body: 'Символическая ссылка быстрее, чем жесткая, так как хранит больше метаданных', correct: false, question: questions[2] },
-  { body: 'Жесткая ссылка указывает на inode файла, а символическая — на его путь', correct: true, question: questions[2] },
+  { body: 'Жесткую ссылку можно создать только на каталог, а символическую — на любой файл', correct: false,
+    question: questions[2] },
+  { body: 'Символическая ссылка быстрее, чем жесткая, так как хранит больше метаданных', correct: false,
+    question: questions[2] },
+  { body: 'Жесткая ссылка указывает на inode файла, а символическая — на его путь', correct: true,
+    question: questions[2] },
 
   { body: 'Небольшой боковой отросток, побег дерева, кустарника или травянистого растения', correct: false,
     question: questions[3] },
@@ -86,7 +90,8 @@ answers_data = [
   { body: 'git branch -m old_name new_name', correct: false, question: questions[6] },
   { body: 'git update-branch --rename old_name new_name', correct: false, question: questions[6] },
 
-  { body: 'Повышает производительность запросов за счет быстрого поиска строк по ключу', correct: true, question: questions[7] },
+  { body: 'Повышает производительность запросов за счет быстрого поиска строк по ключу', correct: true,
+    question: questions[7] },
   { body: 'Снижает скорость выполнения запросов', correct: false, question: questions[7] },
   { body: 'Автоматически удаляет неиспользуемые данные для ускорения запросов', correct: false, question: questions[7] }
 
