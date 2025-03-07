@@ -67,6 +67,9 @@ en:
       title: "Taking the test: "
       total: "Total questions: "
       next: "Next"
+    gist:
+      succes: "Gist was succesfully created!"
+      failure: "An error occured while saving gist"
 
   shared:
     navigation:

@@ -51,6 +51,9 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 gem 'devise', '~> 4.0'
 
+gem "octokit"
+gem 'dotenv-rails'
+
 # LOCALIZATION
 
 gem 'rails-i18n', '~> 7.0.0'
