@@ -67,6 +67,9 @@ ru:
       title: "Прохождение теста: "
       total: "Всего вопросов: "
       next: "Далее"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     navigation:

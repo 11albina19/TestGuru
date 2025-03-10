@@ -1,5 +1,6 @@
 class ResultsController < ApplicationController
-  before_action :set_result, only: %i[show update result]
+  before_action :set_result, only: %i[show update result gist]
+  skip_before_action :verify_authenticity_token, only: [:gist]
 
   def show; end
 
@@ -14,6 +15,18 @@ class ResultsController < ApplicationController
     else
       redirect_to result_path(@result)
     end
+  end
+
+  def gist
+    result = GistQuestionService.new(@result.current_question).call
+
+    flash_options = if result.success?
+                      { notice: t('.success', url: result.url) }
+                    else
+                      { alert: t('.failure') }
+                    end
+
+    redirect_to @result, flash_options
   end
 
   private

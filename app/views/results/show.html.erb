@@ -17,6 +17,7 @@
       <% end %>
     </div>
     <div class="d-grid mb-2">
+      <p><%= button_to 'Gist Question', gist_result_path(@result), method: :post, authenticity_token: true, class: "btn btn-secondary" %></p>
       <%= form.submit t('.next'), class: "btn btn-primary" %>
     </div>
   <% end %>
