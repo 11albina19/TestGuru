@@ -53,6 +53,8 @@ gem 'devise', '~> 4.0'
 
 gem "octokit"
 gem 'dotenv-rails'
+gem 'faraday'
+gem 'faraday-retry'
 
 # LOCALIZATION
 
