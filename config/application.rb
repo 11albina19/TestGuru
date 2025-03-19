@@ -13,5 +13,8 @@ module Testguru
     config.load_defaults 7.0
     config.time_zone = 'Samara'
     config.i18n.default_locale = :ru
+    if defined?(Dotenv) && ['development', 'test'].include?(ENV['RAILS_ENV'])
+      Dotenv::Rails.load
+    end
   end
 end
