@@ -20,6 +20,10 @@ ru:
   admins:
     base_controller:
       no_access: "У вас нет прав для просмотра этой страницы"
+    gists:
+      question: "Вопрос"
+      user: "Пользователь"
+      back: "Назад"
     nav:
       title: "ТестГуру панель администратора"
       welcome: "Добро пожаловать, "

@@ -1,0 +1,15 @@
+<div class="container mt-2">
+  <table class="table table-striped table-hover">
+    <thead class="table-dark">
+    <tr>
+      <th><%= t('admins.gists.question') %></th>
+      <th>Gist URL</th>
+      <th><%= t('admins.gists.user') %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render @gists %>
+    </tbody>
+  </table>
+</div>
+<%= link_to t('admins.gists.back'), admins_tests_path %>

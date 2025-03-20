@@ -3,7 +3,7 @@ module Admins
     skip_before_action :authenticate_user!
 
     def index
-      @gist = Gist.all
+      @gists = Gist.all
     end
   end
 end

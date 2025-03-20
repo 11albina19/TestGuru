@@ -3,7 +3,7 @@ class GistsController < ApplicationController
   before_action :set_result, only: :create
 
   def create
-    new_gist = GistQuestionService.new(@result.current_question)
+    new_gist = GistQuestionService.new(@result.current_question, current_user)
     result = new_gist.call
 
     flash_options = if new_gist.success?

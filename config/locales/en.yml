@@ -20,6 +20,10 @@ en:
   admins:
     base_controller:
       no_access: "You are not authorized to view this page"
+    gists:
+      question: "Question"
+      user: "User"
+      back: "Back"
     nav:
       title: "TestGuru admin panel"
       welcome: "Welcome, "
