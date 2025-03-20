@@ -7,7 +7,7 @@ class GistsController < ApplicationController
     result = new_gist.call
 
     flash_options = if new_gist.success?
-                      { notice: t('.success')}
+                      { notice: "#{t('.success')}: #{result.url}"}
                     else
                       binding.pry
                       { alert: t('.failure')}

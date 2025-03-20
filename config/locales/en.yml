@@ -17,6 +17,9 @@ en:
       successfully: "Test passed successfully"
       failed: "Test failed"
 
+  services:
+    gist_question_service:
+      message: "A question about '%{code}' from TestGuru"
   admins:
     base_controller:
       no_access: "You are not authorized to view this page"
