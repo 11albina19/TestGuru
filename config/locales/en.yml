@@ -66,9 +66,12 @@ en:
     show:
       title: "Taking the test: "
       total: "Total questions: "
+      link: "Save question in gist"
       next: "Next"
-    gist:
-      succes: "Gist was succesfully created!"
+
+  gists:
+    create:
+      success: "Gist was succesfully created!"
       failure: "An error occured while saving gist"
 
   shared:

@@ -66,8 +66,11 @@ ru:
     show:
       title: "Прохождение теста: "
       total: "Всего вопросов: "
+      link: "Сохранить вопрос в gist"
       next: "Далее"
-    gist:
+
+  gists:
+    create:
       success: "Gist успешно сохранен"
       failure: "Во время сохранения gist произошла ошибка"
 

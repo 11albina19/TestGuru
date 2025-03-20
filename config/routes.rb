@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   end
 
   resources :results, only: %i[show update] do
+    resource :gist, only: :create
     member do
       get :result
-      post :gist
     end
   end
 

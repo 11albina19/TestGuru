@@ -17,6 +17,7 @@
       <% end %>
     </div>
     <div class="d-grid mb-2">
+      <%= link_to t('.link'), result_gist_path(@result), data: { turbo_method: :post}, class: "btn btn-outline-danger btn-sm" %>
       <%= form.submit t('.next'), class: "btn btn-primary" %>
     </div>
   <% end %>
