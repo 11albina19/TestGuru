@@ -18,6 +18,8 @@ ru:
       failed: "Тест не пройден"
 
   admins:
+    base_controller:
+      no_access: "У вас нет прав для просмотра этой страницы"
     nav:
       title: "ТестГуру панель администратора"
       welcome: "Добро пожаловать, "
@@ -44,6 +46,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         create: "Создать тест"
+        all_gist: "Смотреть все gist"
       new:
         title: "Создать новый тест"
       create:

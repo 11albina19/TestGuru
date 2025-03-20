@@ -18,6 +18,8 @@ en:
       failed: "Test failed"
 
   admins:
+    base_controller:
+      no_access: "You are not authorized to view this page"
     nav:
       title: "TestGuru admin panel"
       welcome: "Welcome, "
@@ -44,6 +46,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         create: "Create a test"
+        all_gist: "See all gist"
       new:
         title: "Create a new test"
       create:

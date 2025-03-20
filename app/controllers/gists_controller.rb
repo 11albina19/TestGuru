@@ -2,8 +2,6 @@ class GistsController < ApplicationController
 
   before_action :set_result, only: :create
 
-  def index; end
-
   def create
     new_gist = GistQuestionService.new(@result.current_question)
     result = new_gist.call
