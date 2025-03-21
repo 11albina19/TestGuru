@@ -115,8 +115,6 @@ GEM
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
-    faraday-retry (2.2.1)
-      faraday (~> 2.0)
     ffi (1.17.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -286,8 +284,6 @@ DEPENDENCIES
   debug
   devise (~> 4.0)
   dotenv-rails
-  faraday
-  faraday-retry
   importmap-rails
   jbuilder
   letter_opener

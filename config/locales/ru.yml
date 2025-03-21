@@ -20,6 +20,7 @@ ru:
   services:
     gist_question_service:
      message: "Вопрос о '%{code}' от TestGuru"
+     no_token: "Отсутствует GITHUB_ACCESS_TOKEN"
   admins:
     base_controller:
       no_access: "У вас нет прав для просмотра этой страницы"

@@ -20,6 +20,7 @@ en:
   services:
     gist_question_service:
       message: "A question about '%{code}' from TestGuru"
+      no_token: "Missing GITHUB_ACCESS_TOKEN"
   admins:
     base_controller:
       no_access: "You are not authorized to view this page"
