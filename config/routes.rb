@@ -10,12 +10,14 @@ Rails.application.routes.draw do
   end
 
   resources :results, only: %i[show update] do
+    resource :gist, only: :create
     member do
-      get :result # controller method name
+      get :result
     end
   end
 
   namespace :admins do
+    resources :gists, only: :index
     resources :tests do
       resources :questions, except: :index do
         resources :answers, except: :index

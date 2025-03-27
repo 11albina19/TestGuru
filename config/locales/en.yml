@@ -17,7 +17,17 @@ en:
       successfully: "Test passed successfully"
       failed: "Test failed"
 
+  services:
+    gist_question_service:
+      message: "A question about '%{code}' from TestGuru"
+      no_token: "Missing GITHUB_ACCESS_TOKEN"
   admins:
+    base_controller:
+      no_access: "You are not authorized to view this page"
+    gists:
+      question: "Question"
+      user: "User"
+      back: "Back"
     nav:
       title: "TestGuru admin panel"
       welcome: "Welcome, "
@@ -44,6 +54,7 @@ en:
         questions: "Questions"
         actions: "Actions"
         create: "Create a test"
+        all_gist: "See all gist"
       new:
         title: "Create a new test"
       create:
@@ -66,7 +77,13 @@ en:
     show:
       title: "Taking the test: "
       total: "Total questions: "
+      link: "Save question in gist"
       next: "Next"
+
+  gists:
+    create:
+      success: "Gist was succesfully created!"
+      failure: "An error occured while saving gist"
 
   shared:
     navigation:

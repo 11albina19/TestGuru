@@ -17,7 +17,17 @@ ru:
       successfully: "Тест успешно пройден"
       failed: "Тест не пройден"
 
+  services:
+    gist_question_service:
+     message: "Вопрос о '%{code}' от TestGuru"
+     no_token: "Отсутствует GITHUB_ACCESS_TOKEN"
   admins:
+    base_controller:
+      no_access: "У вас нет прав для просмотра этой страницы"
+    gists:
+      question: "Вопрос"
+      user: "Пользователь"
+      back: "Назад"
     nav:
       title: "ТестГуру панель администратора"
       welcome: "Добро пожаловать, "
@@ -44,6 +54,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         create: "Создать тест"
+        all_gist: "Смотреть все gist"
       new:
         title: "Создать новый тест"
       create:
@@ -66,7 +77,13 @@ ru:
     show:
       title: "Прохождение теста: "
       total: "Всего вопросов: "
+      link: "Сохранить вопрос в gist"
       next: "Далее"
+
+  gists:
+    create:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     navigation:
