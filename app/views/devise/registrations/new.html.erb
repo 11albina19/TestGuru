@@ -4,21 +4,25 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email, t('.email') %><br />
+    <%= f.label :email, t('.email') %><br/>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
     <%= f.label :password, t('.password') %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> <%= t('.characters_minimum') %>)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+      <em>(<%= @minimum_password_length %> <%= t('.characters_minimum') %>)</em>
+    <% end %><br/>
+    <%= f.password_field :password, id: "user_password", autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation, t('.password_confirmation') %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.label :password_confirmation, t('.password_confirmation') %><br/>
+    <%= f.password_field :password_confirmation, id: "user_password_confirmation", autocomplete: "new-password" %>
+    <span id="password-match-icon">
+      <%= octicon "check", class: "text-success hide" %>
+      <%= octicon "x", class: "text-danger hide" %>
+      </span>
   </div>
 
   <div class="actions">
