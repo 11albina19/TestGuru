@@ -1,14 +1,12 @@
 document.addEventListener('turbo:load', function() {
     let control = document.querySelector('.sort-by-title')
 
-    console.log("Сортируем!")
     if (control) {
         control.addEventListener('click', sortRowsByTitle)
     }
 })
 
 function sortRowsByTitle() {
-    console.log("sortRowsByTitle!")
     let table = document.querySelector('table');
     let rows = Array.from(table.querySelectorAll('tr')).slice(1);
 
