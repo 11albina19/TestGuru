@@ -6,13 +6,11 @@ document.addEventListener('turbo:load', function () {
     checkIcon = document.querySelector('[class*="octicon-check"]')
     alertIcon = document.querySelector('[class*="octicon-x"]')
 
-    if (passwordConfirmation) {
-        passwordConfirmation.addEventListener('input', passwordConfirmationCheck)
-    }
-    
-    if (password) {
-        password.addEventListener('input', passwordConfirmationCheck)
-    }
+    document.querySelector('form').addEventListener('input', function (event) {
+        if (event.target === password || event.target === passwordConfirmation) {
+            passwordConfirmationCheck()
+        }
+    })
 });
 
 function passwordConfirmationCheck() {
