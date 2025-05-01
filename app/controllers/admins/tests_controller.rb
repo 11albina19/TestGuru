@@ -4,9 +4,7 @@ module Admins
     before_action :find_tests, only: %i[index update_inline]
     before_action :find_test, only: %i[show edit destroy update start update_inline]
 
-    def index
-      @tests = Test.all
-    end
+    def index; end
 
     def show
       @questions = @test.questions
@@ -38,7 +36,7 @@ module Admins
 
     def update_inline
       if @test.update(test_params)
-        redirect_to admin_tests_path(@test)
+        redirect_to admins_tests_path(@test)
       else
         render :index
       end
