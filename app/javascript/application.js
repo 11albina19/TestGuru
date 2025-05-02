@@ -3,4 +3,4 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "utilities/sorting";
 import "utilities/check";
-import "utilities/form_inline.js";
+import "utilities/form_inline";
