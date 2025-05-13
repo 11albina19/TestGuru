@@ -35,10 +35,13 @@ module Admins
     end
 
     def update_inline
+      #find_tests
+      #find_test
+
       if @test.update(test_params)
-        redirect_to admins_tests_path(@test)
+        redirect_to admins_tests_path
       else
-        render :index
+        render :index#, status: :unprocessable_entity
       end
     end
 

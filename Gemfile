@@ -52,6 +52,7 @@ gem 'bootsnap', require: false
 gem 'devise', '~> 4.0'
 
 gem 'octokit'
+gem 'faraday-retry'
 
 # LOCALIZATION
 
