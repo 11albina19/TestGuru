@@ -1,32 +1,3 @@
-body {
-  background-color: #17252A;
-  /*font-family: CodeNext-Trial-ExtraBold;*/
-  font-size: 18px;
-  color: #ffffff;
-  margin: 0;
-  padding: 30px;
-}
-
-header {
-  background-color: #f9f9f9;
-  padding: 0px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.navigation {
-  background-color: #17252A;
-  text-align: right;
-  justify-content: flex-end;
-  padding: 15px 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-size: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
 
 .navigation a {
   color: #fff;
@@ -50,7 +21,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  /*color: #333;*/
   font-weight: bold;
 }
 
@@ -60,7 +31,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #FEFFFF;
-  color: #17252A;
+  /*color: #17252A;*/
   left: 0;
   padding: 0;
   margin: 0;
@@ -85,15 +56,6 @@ footer {
 
 .social a {
   margin-right: 10px;
-}
-
-a {
-  color: #3AAFA9;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #3AAFA9;
 }
 
 .form-check {
@@ -130,7 +92,7 @@ header nav {
 }
 
 .project-link {
-  background-color: #17252A;
+  /*background-color: #17252A;*/
   font-size: 1.5rem;
   font-weight: bold;
   color: #007bff;
@@ -138,14 +100,14 @@ header nav {
 }
 
 .nav-link {
-  background-color: #17252A;
+  /*background-color: #17252A;*/
   margin-left: 10px;
   color: #007bff;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  background-color: #17252A;
+  /*background-color: #17252A;*/
   text-decoration: underline;
 }
 
@@ -153,7 +115,7 @@ header nav {
   height: 35px;
   padding: 15px;
   line-height: 35px;
-  colors: #ffffff;
+  color: #ffffff;
   background-color: #4293e6;
   margin-bottom: 40px;
 }
@@ -175,3 +137,26 @@ header nav {
 a {
   color: #ffffff;
 }
+
+.container.flex-grow-1 {
+  max-height: 300px; 
+  overflow: auto;
+}
+
+.progress-container {
+  height: 20px;
+  background-color: grey;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+  width: 100%; 
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%; 
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+
