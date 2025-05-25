@@ -1,16 +1,16 @@
 document.addEventListener('turbo:load', function() { 
-    var controls = document.querySelectorAll('.form-inline-link')
+  let controls = document.querySelectorAll('.form-inline-link')
   
     if (controls.length) {
-      for (var i = 0; i < controls.length; i++) {
+      for (let i = 0; i < controls.length; i++) {
         controls[i].addEventListener('click', formInlineLinkHandler)
       }
     }
   
-    var errors = document.querySelector('.resource-errors')
+    let errors = document.querySelector('.resource-errors')
   
     if (errors) {
-      var resourceId = errors.dataset.resourceId
+      let resourceId = errors.dataset.resourceId
       formInlineHandler(resourceId)
     }
   })
@@ -18,14 +18,14 @@ document.addEventListener('turbo:load', function() {
   function formInlineLinkHandler(event) {
     event.preventDefault()
   
-    var testId = this.dataset.testId
+    let testId = this.dataset.testId
     formInlineHandler(testId)
   }
   
   function formInlineHandler(testId) {
-    var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
-    var testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
-    var formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
+    let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
+    let testTitle = document.querySelector('.test-title[data-test-id="' + testId + '"]')
+    let formInline = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
   
     if (formInline.classList.contains('d-none')) {
       testTitle.classList.add('d-none')
@@ -37,4 +37,3 @@ document.addEventListener('turbo:load', function() {
       link.textContent = 'Edit'
     }
   }
-  
