@@ -40,6 +40,7 @@ ru:
         category: "Категория"
         create: "Создать тест"
         back: "Назад"
+        sure: "Вы уверены?"
       test:
         open: "Открыть"
         edit: "Редактировать"
@@ -55,6 +56,8 @@ ru:
         actions: "Действия"
         create: "Создать тест"
         all_gist: "Смотреть все gist"
+      form_inline:
+        submit: "ОК"
       new:
         title: "Создать новый тест"
       create:
