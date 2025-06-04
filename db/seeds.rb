@@ -16,10 +16,11 @@ categories = Category.create!([
                               ])
 
 users = User.create!([
-                       { email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123' },
-                       { email: 'ivan@google.com', password: 'password123', password_confirmation: 'password123' },
+                       { email: 'ivan@gmail.com', password: 'password123', password_confirmation: 'password123' },
                        { email: 'petr@mail.ru', password: 'password123', password_confirmation: 'password123' }
                      ])
+
+admin = Admin.create!(email: '11albina19@gmail.com', password: 'password123', ppassword_confirmation: 'password123')
 
 tests = Test.create!([
                        { title: 'Тест на основы баз данных', level: 1, category: categories[0], author: users[2] },
