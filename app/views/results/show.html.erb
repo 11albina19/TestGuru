@@ -1,19 +1,15 @@
 <div class="container mt-3">
   <h2><%= t('.title') %> <%= @result.test.title %></h2>
   <h4><%= t('.total') %> <%= amount_questions(@result.test) %></h4>
-  <div id="progress-container" class="progress-container"
-     data-position="<%= @result.test.questions.index(@result.current_question) %>"
-     data-count="<%= amount_questions(@result.test) %>">
-  <div id="progress-bar" class="progress-bar"></div>
-</div>
-</div>
-
-</div>
-
 </div>
 
   <div>
     <b class="d-block fs-5">
+        <div id="progress-container" class="progress-container"
+          data-position="<%= @result.test.questions.index(@result.current_question) %>"
+          data-count="<%= amount_questions(@result.test) %>">
+        <div id="progress-bar" class="progress-bar"></div>
+        </div>
       <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
     </b>
   </div>
