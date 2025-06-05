@@ -1,15 +1,17 @@
+<div class="container mt-4">
 <h1>Обратная связь</h1>
 
 <%= form_with url: feedback_path, method: :post do |f| %>
-  <div>
-    <%= f.label :user, 'Имя' %>
-    <%= f.text_field :user, required: true %>
+  <div class="mb-3">
+    <%= f.label :user, 'Имя', class: "form-label" %>
+    <%= f.text_field :user, class: "form-control", required: true %>
   </div>
 
-  <div>
-    <%= f.label :feedback, 'Обратная связь' %>
-    <%= f.text_area :feedback, rows: 5, required: true %>
+  <div class="mb-3">
+    <%= f.label :feedback, 'Обратная связь', class: "form-label" %>
+    <%= f.text_area :feedback, class: "form-control", rows: 5, required: true %>
   </div>
 
-  <%= f.submit 'Отправить' %>
+  <%= f.submit 'Отправить', class: "btn btn-primary"  %>
 <% end %>
+</div>
