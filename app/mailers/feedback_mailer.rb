@@ -1,8 +1,8 @@
-class TestsMailer < ApplicationMailer
-  def completed_test(result)
-    @user = result.user
-    @test = result.test
+class FeedbackMailer < ApplicationMailer
+  def contact(user, feedback)
+    @user = user
+    @feedback = feedback
 
-    mail to: @user.email, subject: 'You just completed the TestGuru test!'
+    mail to: Admin.first.email, subject: t(".subject")
   end
 end

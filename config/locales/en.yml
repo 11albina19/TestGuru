@@ -110,3 +110,6 @@ en:
       actions: "Actions"
     test:
       start: "Start"
+  
+  feedback_mailer:
+    subject: "Feedback from TestGuru"

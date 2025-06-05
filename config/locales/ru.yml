@@ -110,3 +110,6 @@ ru:
       actions: "Действия"
     test:
       start: "Старт"
+
+  feedback_mailer:
+    subject: "Обратная связь от TestGuru"

@@ -1,2 +1,15 @@
-<h1>Feedbacks#new</h1>
-<p>Find me in app/views/feedbacks/new.html.erb</p>
+<h1>Обратная связь</h1>
+
+<%= form_with url: feedback_path, method: :post do |f| %>
+  <div>
+    <%= f.label :user, 'Имя' %>
+    <%= f.text_field :user, required: true %>
+  </div>
+
+  <div>
+    <%= f.label :feedback, 'Обратная связь' %>
+    <%= f.text_area :feedback, rows: 5, required: true %>
+  </div>
+
+  <%= f.submit 'Отправить' %>
+<% end %>
