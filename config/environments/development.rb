@@ -42,6 +42,22 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.default_url_options = {
+    host: 'test-guru-web-r3zt.onrender.com',
+    protocol: 'https'
+  }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.yandex.ru',
+    port: 465,
+    domain: 'yandex.ru',
+    user_name: ENV['YANDEX_USERNAME'],
+    password: ENV['YANDEX_APP_PASSWORD'],
+    authentication: :login,
+    ssl: true,
+    tls: true,
+    enable_starttls_auto: true
+  }
 
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
