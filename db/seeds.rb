@@ -16,8 +16,8 @@ categories = Category.create!([
                               ])
 
 users = User.create!([
-                       { email: 'ivan@gmail.com', password: 'password123', password_confirmation: 'password123' },
-                       { email: 'petr@mail.ru', password: 'password123', password_confirmation: 'password123' }
+                       { email: 'ivan@gmail.com', password: 'password123'},
+                       { email: 'petr@mail.ru', password: 'password123'}
                      ])
 
 admin = Admin.create!(first_name: "admin", last_name: "admin", email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123')
