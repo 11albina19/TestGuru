@@ -9,6 +9,12 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Category.delete_all
+User.delete_all
+Admin.delete_all
+Test.delete_all
+Question.delete_all
+Answer.delete_all
+
 categories = Category.create!([
                                 { title: 'Базы данных' },
                                 { title: 'Git' },
@@ -16,16 +22,13 @@ categories = Category.create!([
                                 { title: 'OS' }
                               ])
 
-User.delete_all
 users = User.create!([
                        { email: 'ivan@gmail.com', password: 'password123'},
                        { email: 'petr@mail.ru', password: 'password123'}
                      ])
-
-Admin.delete_all               
+               
 admin = Admin.create!(first_name: "admin", last_name: "admin", email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123')
 
-Test.delete_all
 tests = Test.create!([
                        { title: 'Тест на основы баз данных', level: 1, category: categories[0], author: users[1] },
                        { title: 'Тест на оптимизацию запросов', level: 3, category: categories[0], author: users[1] },
@@ -34,7 +37,6 @@ tests = Test.create!([
                        { title: 'Тест на знание миграций в Rails', level: 2, category: categories[2], author: users[1] }
                      ])
 
-Question.delete_all
 questions = Question.create!([
                                { body: 'Понятие функций и триггеров', test: tests[0] },
                                { body: 'В чем заключается третья нормальная форма?', test: tests[0] },
@@ -103,5 +105,4 @@ answers_data = [
 
 ]
 
-Answer.delete_all
 Answer.create!(answers_data)
