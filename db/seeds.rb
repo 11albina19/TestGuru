@@ -14,6 +14,7 @@ Test.delete_all
 Admin.delete_all
 User.delete_all
 Category.delete_all
+Result.delete_all
 
 categories = Category.create!([
                                 { title: 'Базы данных' },
