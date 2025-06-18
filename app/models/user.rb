@@ -4,8 +4,8 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :trackable,
-         :validatable,
-         :confirmable
+         :validatable
+         #:confirmable
 
   has_many :created_tests, class_name: 'Test', foreign_key: :author_id
   has_many :results, dependent: :destroy
