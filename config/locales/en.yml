@@ -33,6 +33,9 @@ en:
       welcome: "Welcome, "
       logout: "sign out"
       name: "TestGuru"
+    questions:
+      question: 
+        sure: "Are you sure?"
     tests:
       form:
         title: "Title"
@@ -40,12 +43,12 @@ en:
         category: "Category"
         create: "Create test"
         back: "Back"
-        sure: "Are you sure?"
       test:
         open: "Open"
         edit: "Edit"
         delete: "Delete"
         confirmation: "Are you sure?"
+        sure: "Are you sure?"
       edit:
         title: "Edit test"
       index:
@@ -96,6 +99,7 @@ en:
       login: "Login"
       register: "Register"
       panel: "Panel admin"
+      feedback: "Feedback form"
     footer:
       author: "Safina Albina"
       description: "Online quizzes to advertise a brand or test your knowledge"

@@ -6,6 +6,8 @@ document.addEventListener('turbo:load', function () {
     checkIcon = document.querySelector('[class*="octicon-check"]')
     alertIcon = document.querySelector('[class*="octicon-x"]')
 
+    if (!passwordConfirmation) return;
+
     document.querySelector('form').addEventListener('input', function (event) {
         if (event.target === password || event.target === passwordConfirmation) {
             passwordConfirmationCheck()
@@ -14,6 +16,7 @@ document.addEventListener('turbo:load', function () {
 });
 
 function passwordConfirmationCheck() {
+    
     if (!password.value.length || !passwordConfirmation.value.length) {
         checkIcon.classList.add('hide')
         alertIcon.classList.add('hide')

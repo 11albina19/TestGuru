@@ -79,6 +79,7 @@ GEM
       popper_js (>= 2.9.2, < 3)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    byebug (12.0.0)
     capybara (3.39.1)
       addressable
       matrix
@@ -180,6 +181,9 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    pry-byebug (3.11.0)
+      byebug (~> 12.0)
+      pry (>= 0.13, < 0.16)
     pry-rails (0.3.11)
       pry (>= 0.13.0)
     public_suffix (5.0.1)
@@ -298,6 +302,7 @@ DEPENDENCIES
   octicons_helper
   octokit
   pg
+  pry-byebug
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.5)

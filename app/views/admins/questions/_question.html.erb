@@ -3,8 +3,9 @@
   <td><%= link_to 'Открыть', admins_test_question_path(question) %></td>
   <td><%= link_to 'Редактировать', edit_admins_test_question_path(question) %></td>
   <td>
-    <%= link_to 'Удалить',
-                admins_test_question_path(question),
-                data: { turbo_method: :delete, turbo_confirm: "Вы уверены?" }%>
+    <%= link_to t('.delete'),
+                [:admins, question.test, question],
+                data: { turbo_method: :delete, turbo_confirm: t('.sure') },
+                class: "btn btn-outline-danger btn-sm" %>
   </td>
 </tr>

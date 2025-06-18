@@ -1,7 +1,7 @@
 module Admins
   class QuestionsController < Admins::BaseController
     before_action :find_test, only: %i[new create]
-    before_action :find_question, only: %i[new show destroy edit update]
+    before_action :find_question, only: %i[show destroy edit update]
 
     def show; end
 
@@ -14,7 +14,7 @@ module Admins
     def create
       @question = @test.questions.new(question_params)
       if @question.save
-        redirect_to @question
+        redirect_to [:admins, @test, @question]
       else
         render :new
       end
@@ -30,7 +30,7 @@ module Admins
 
     def destroy
       @question.destroy
-      redirect_to test_path(@question.test)
+      redirect_to [:admins, @question.test]
     end
 
     private
