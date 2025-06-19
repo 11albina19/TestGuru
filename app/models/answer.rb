@@ -9,6 +9,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_quantity_answers
-    errors.add(:answers, :quantity_limit) if question.answers.count >= 4
+    errors.add(:base, :quantity_limit) if question.answers.count >= 4
   end
 end

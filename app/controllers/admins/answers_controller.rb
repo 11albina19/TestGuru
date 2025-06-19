@@ -15,7 +15,7 @@ module Admins
       @answer = @question.answers.new(answer_params)
 
       if @answer.save
-        redirect_to @answer, notice: 'Answer was successfully created.'
+        redirect_to [:admins, @test, @question, @answers]
       else
         render :new
       end
@@ -38,6 +38,7 @@ module Admins
 
     def find_question
       @question = Question.find(params[:question_id])
+      @test = @question.test
     end
 
     def set_answer
