@@ -8,6 +8,15 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Gist.delete_all
+Result.delete_all
+Answer.delete_all
+Question.delete_all
+Test.delete_all
+Admin.delete_all
+User.delete_all
+Category.delete_all
+
 categories = Category.create!([
                                 { title: 'Базы данных' },
                                 { title: 'Git' },
@@ -16,17 +25,18 @@ categories = Category.create!([
                               ])
 
 users = User.create!([
-                       { email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123' },
-                       { email: 'ivan@google.com', password: 'password123', password_confirmation: 'password123' },
-                       { email: 'petr@mail.ru', password: 'password123', password_confirmation: 'password123' }
+                       { email: 'ivan@gmail.com', password: 'password123'},
+                       { email: 'petr@mail.ru', password: 'password123'}
                      ])
+               
+admin = Admin.create!(first_name: "admin", last_name: "admin", email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123')
 
 tests = Test.create!([
-                       { title: 'Тест на основы баз данных', level: 1, category: categories[0], author: users[2] },
-                       { title: 'Тест на оптимизацию запросов', level: 3, category: categories[0], author: users[2] },
-                       { title: 'Тест на знание linux', level: 2, category: categories[3], author: users[2] },
-                       { title: 'Тест на основы git', level: 1, category: categories[1], author: users[2] },
-                       { title: 'Тест на знание миграций в Rails', level: 2, category: categories[2], author: users[2] }
+                       { title: 'Тест на основы баз данных', level: 1, category: categories[0], author: users[1] },
+                       { title: 'Тест на оптимизацию запросов', level: 3, category: categories[0], author: users[1] },
+                       { title: 'Тест на знание linux', level: 2, category: categories[3], author: users[1] },
+                       { title: 'Тест на основы git', level: 1, category: categories[1], author: users[1] },
+                       { title: 'Тест на знание миграций в Rails', level: 2, category: categories[2], author: users[1] }
                      ])
 
 questions = Question.create!([

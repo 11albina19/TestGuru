@@ -33,6 +33,9 @@ ru:
       welcome: "Добро пожаловать, "
       logout: "Выйти"
       name: "ТестГуру"
+    questions:
+      question: 
+        sure: "Вы уверены?"
     tests:
       form:
         title: "Заголовок"
@@ -40,12 +43,12 @@ ru:
         category: "Категория"
         create: "Создать тест"
         back: "Назад"
-        sure: "Вы уверены?"
       test:
         open: "Открыть"
         edit: "Редактировать"
         delete: "Удалить"
         confirmation: "Вы уверены?"
+        sure: "Вы уверены?"
       edit:
         title: "Редактировать тест"
       index:
@@ -96,6 +99,7 @@ ru:
       login: "Войти"
       register: "Зарегистрироваться"
       panel: "Панель администратора"
+      feedback: "Форма обратной связи"
     footer:
       author: "Сафина Альбина"
       description: "Онлайн-викторины для рекламы бренда или проверки знаний"
@@ -110,3 +114,6 @@ ru:
       actions: "Действия"
     test:
       start: "Старт"
+
+  feedback_mailer:
+    subject: "Обратная связь от TestGuru"

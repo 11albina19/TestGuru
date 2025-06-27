@@ -1,4 +1,8 @@
 
+.navigation {
+
+}
+
 .navigation a {
   color: #fff;
   text-decoration: none;
@@ -136,11 +140,6 @@ header nav {
 .nav.nav-admin
 a {
   color: #ffffff;
-}
-
-.container.flex-grow-1 {
-  max-height: 300px; 
-  overflow: auto;
 }
 
 .progress-container {

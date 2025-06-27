@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def question_header(question)
+  def question_header(namespace, question)
     title = question.test.title
     if question.new_record?
       "Create New #{title} Question"
