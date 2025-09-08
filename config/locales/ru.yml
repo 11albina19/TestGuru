@@ -40,8 +40,9 @@ ru:
       form:
         title: "Заголовок"
         level: "Уровень"
+        time_limit: "Таймер"
         category: "Категория"
-        create: "Создать тест"
+        save: "Сохранить"
         back: "Назад"
       test:
         open: "Открыть"
@@ -55,6 +56,7 @@ ru:
         header: "Доступные тесты"
         title: "Название"
         level: "Уровень"
+        time_limit: "Таймер"
         questions: "Вопросы"
         actions: "Действия"
         create: "Создать тест"
@@ -68,6 +70,7 @@ ru:
       show:
         title: "Заголовок"
         level: "Уровень"
+        time_limit: "Таймер"
         content: "Тест содержит вопросы"
         actions: "Действия"
         back: "Назад"
@@ -110,6 +113,7 @@ ru:
       header: "Доступные тесты"
       title: "Название"
       level: "Уровень"
+      time_limit: "Таймер"
       questions: "Вопросы"
       actions: "Действия"
     test:

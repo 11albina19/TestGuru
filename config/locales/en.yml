@@ -40,8 +40,9 @@ en:
       form:
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         category: "Category"
-        create: "Create test"
+        save: "Save"
         back: "Back"
       test:
         open: "Open"
@@ -55,6 +56,7 @@ en:
         header: "Available tests"
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         questions: "Questions"
         actions: "Actions"
         create: "Create a test"
@@ -68,6 +70,7 @@ en:
       show:
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         content: "The test contains questions"
         actions: "Actions"
         back: "Back"
@@ -110,6 +113,7 @@ en:
       header: "Available tests"
       title: "Title"
       level: "Level"
+      time_limit: "Timer"
       questions: "Questions"
       actions: "Actions"
     test:
