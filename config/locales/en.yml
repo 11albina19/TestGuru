@@ -30,6 +30,7 @@ en:
       back: "Back"
     nav:
       title: "TestGuru admin panel"
+      management: "Badge Management"
       welcome: "Welcome, "
       logout: "sign out"
       name: "TestGuru"
@@ -102,6 +103,7 @@ en:
       login: "Login"
       register: "Register"
       panel: "Panel admin"
+      badge: "Badges"
       feedback: "Feedback form"
     footer:
       author: "Safina Albina"
