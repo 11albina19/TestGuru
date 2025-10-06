@@ -37,6 +37,29 @@ en:
     questions:
       question: 
         sure: "Are you sure?"
+    badges:
+      show:
+        title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        actions: "Actions"
+        back: "Back"
+        edit: "Edit"
+        add: "Add a badge"
+      index:
+        title: "Title"
+      form:
+        title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        save: "Save"
+        back: "Back"
+      create:
+        success: "Badge created successfully"
+      badge:
+        sure: "Are you sure?"
     tests:
       form:
         title: "Title"

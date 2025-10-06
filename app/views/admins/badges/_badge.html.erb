@@ -1,0 +1,21 @@
+<tr>
+  <td class="align-middle">
+    <%= content_tag :span, badge.title, class: 'badge-title', data: { "badge_id": badge.id } %>
+  </td>
+  <td class="align-middle"><%= badge.title%></td>
+  <td class="align-middle"><%= badge.image_url%></td>
+  <td class="align-middle"><%= badge.rule_type%></td>
+  <td class="align-middle"><%= link_to t('.open'), admins_badge_path(badge) %></td>
+  <td class="align-middle">
+    <%= link_to t('.edit'),
+                edit_admins_badge_path(badge),
+                data: { "badge_id": badge.id },
+                class: 'form-inline-link' %>
+  </td>
+  <td class="align-middle">
+    <%= link_to t('.delete'),
+                admins_badge_path(badge),
+                data: { turbo_method: :delete, turbo_confirm: t('.sure') },
+                class: "btn btn-outline-danger btn-sm" %>
+  </td>
+</tr>

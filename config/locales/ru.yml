@@ -37,6 +37,29 @@ ru:
     questions:
       question: 
         sure: "Вы уверены?"
+    badges:
+      show:
+        title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать"
+        add: "Добавить бейдж"
+      index:
+        title: "Заголовок"
+      form:
+        title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        save: "Сохранить"
+        back: "Назад"
+      create:
+        success: "Бейдж успешно создан"
+      badge:
+        sure: "Вы уверены?"
     tests:
       form:
         title: "Заголовок"

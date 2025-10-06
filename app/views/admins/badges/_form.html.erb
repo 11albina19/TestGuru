@@ -1,0 +1,21 @@
+<%= form_with model: [:admins, @badge], local: true, data: { turbo: false } do |form| %>
+<%= render 'shared/errors', resource: @badge %>
+  <p>
+    <%= form.label :title, t('.title') %>
+    <%= form.text_field :title, id: :test_title %>
+  </p>
+  <p>
+    <%= form.label :image_url, t('.image_url')   %>
+    <%= form.text_field :image_url, id: :test_level %>
+  </p>
+    <p>
+    <%= form.label :rule_type, t('.rule_type')   %>
+    <%= form.text_field :rule_type, id: :time_limit %>
+  </p>
+  <p>
+    <%= form.label :parameter, t('.parameter')  %>
+    <%= form.text_field :parameter, id: :parameter %>
+  </p>
+  <p><%= form.submit t('.save') %></p>
+<% end %>
+<%= link_to t('.back'), admins_tests_path %>
