@@ -10,17 +10,9 @@ class BadgeGetService
     @result = result
   end
 
-  def call
-  #ПРАВИЛО 1
-  #поправить
-  
-  #ПРАВИЛО 2
-  #поправить
-  
-  #ПРАВИЛО 3
-  #поправить
-    RULES.each do |key, value|
-      value.check_the_rule(key, @result)
+  def call 
+    RULES.each do |rule, rule_class|
+      rule_class.check_the_rule(rule, @result)
     end
   end
 end
