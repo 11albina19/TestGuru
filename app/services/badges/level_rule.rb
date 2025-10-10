@@ -8,7 +8,7 @@ module Badges
         binding.pry
       
         badge_in_level = Badge.where(rule_type: rule_name, parameter: test_level)
-        if badge_in_level.exists?
+        if badge_in_level.exists? && result.successful?
           user.badges << badge_in_level if badge_in_level.any?
         end
       end
