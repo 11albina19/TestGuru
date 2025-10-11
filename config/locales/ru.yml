@@ -37,7 +37,11 @@ ru:
     questions:
       question: 
         sure: "Вы уверены?"
-    badges:
+    badges: 
+      badge:
+        open: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить" 
       show:
         title: "Заголовок"
         image_url: "Изображение"
@@ -48,7 +52,13 @@ ru:
         edit: "Редактировать"
         add: "Добавить бейдж"
       index:
+        header: "Доступные бейджи"
+        create: "Создать"
         title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        actions: "Действия"
       form:
         title: "Заголовок"
         image_url: "Изображение"

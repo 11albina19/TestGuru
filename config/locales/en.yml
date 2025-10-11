@@ -38,6 +38,10 @@ en:
       question: 
         sure: "Are you sure?"
     badges:
+      badge:
+        open: "Open"
+        edit: "Edit"
+        delete: "Delete" 
       show:
         title: "Title"
         image_url: "Image"
@@ -48,7 +52,13 @@ en:
         edit: "Edit"
         add: "Add a badge"
       index:
+        header: "Available badges"
+        create: "Create"
         title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        actions: "Actions"
       form:
         title: "Title"
         image_url: "Image"

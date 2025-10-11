@@ -1,10 +1,8 @@
 <tr>
-  <td class="align-middle">
-    <%= content_tag :span, badge.title, class: 'badge-title', data: { "badge_id": badge.id } %>
-  </td>
   <td class="align-middle"><%= badge.title%></td>
   <td class="align-middle"><%= badge.image_url%></td>
   <td class="align-middle"><%= badge.rule_type%></td>
+  <td class="align-middle"><%= badge.parameter%></td>
   <td class="align-middle"><%= link_to t('.open'), admins_badge_path(badge) %></td>
   <td class="align-middle">
     <%= link_to t('.edit'),
