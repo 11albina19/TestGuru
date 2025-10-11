@@ -7,7 +7,7 @@ module Badges
       
         badge_in_level = Badge
           .where(rule_type: rule_name, parameter: test_level)
-          
+
         if badge_in_level.exists? && result.successful?
           
           tests_in_level = Test
@@ -22,8 +22,6 @@ module Badges
 
           user.badges << badge_in_level if (tests_in_level - passed_tests_in_level).empty?
         end
-
-        binding.pry
       end
     end
   end
