@@ -10,6 +10,12 @@
           data-count="<%= amount_questions(@result.test) %>">
         <div id="progress-bar" class="progress-bar"></div>
         </div>
+        <div
+          data-controller="timer"
+          data-timer-finish-at-value="<%= @result.finished_at.to_i %>"
+          data-timer-server-time-value="<%= @server_time %>">
+        Осталось: <span data-timer-target="output"></span>
+        </div>
       <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
     </b>
   </div>
