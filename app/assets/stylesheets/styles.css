@@ -158,4 +158,19 @@ a {
   transition: width 0.3s ease;
 }
 
+/*badges*/
 
+.badge-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.badge-image.locked {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.badge-image:not(.locked):hover {
+  transform: scale(1.05);
+}

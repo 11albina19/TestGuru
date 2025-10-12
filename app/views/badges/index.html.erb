@@ -1,0 +1,16 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Мои бейджи</h1>
+
+  <div class="row">
+    <% @badges.each do |badge| %>
+      <% has_badge = @user_badges_id.include?(badge.id) %>
+
+      <div class="col-md-3 col-sm-4 mb-4 text-center">
+        <%= image_tag(badge.image_url,
+                      class: "badge-image #{'locked' unless has_badge}") %>
+
+        <h5 class="mt-2"><%= badge.title %></h5>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -4,6 +4,7 @@
     <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
   <td class="align-middle"><%= test_level(test) %></td>
+  <td class="align-middle"><%= test.time_limit %></td>
   <td class="align-middle"><%= amount_questions(test) %></td>
   <td class="align-middle"><%= link_to t('.open'), admins_test_path(test) %></td>
   <td class="align-middle">

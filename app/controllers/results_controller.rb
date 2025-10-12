@@ -1,7 +1,9 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: %i[show update result]
 
-  def show; end
+  def show
+    @server_time = Time.current.to_i
+  end
 
   def result; end
 
@@ -9,6 +11,7 @@ class ResultsController < ApplicationController
     @result.accept!(params[:answer_ids])
 
     if @result.completed?
+      badge = BadgeGetService.new(@result).call
       TestsMailer.completed_test(@result).deliver_now
       redirect_to result_result_path(@result)
     else
