@@ -13,7 +13,8 @@
         <div
           data-controller="timer"
           data-timer-finish-at-value="<%= @result.finished_at.to_i %>"
-          data-timer-server-time-value="<%= @server_time %>">
+          data-timer-server-time-value="<%= @server_time %>"
+          data-timer-redirect-url-value="<%= result_result_path(@result) %>">
         Осталось: <span data-timer-target="output"></span>
         </div>
       <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
