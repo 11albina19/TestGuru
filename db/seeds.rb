@@ -8,6 +8,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+BadgeUser.delete_all
 Gist.delete_all
 Result.delete_all
 Answer.delete_all
@@ -16,6 +17,7 @@ Test.delete_all
 Admin.delete_all
 User.delete_all
 Category.delete_all
+Badge.delete_all
 
 categories = Category.create!([
                                 { title: 'Базы данных' },
@@ -108,3 +110,12 @@ answers_data = [
 ]
 
 Answer.create!(answers_data)
+
+badges_data = [
+  {title: 'Хардкорщик', image_url: '/badges/opened.jpg', rule_type: 'level', parameter: '3'},
+  {title: 'Знаток операционок', image_url: '/badges/opened.jpg', rule_type: 'category', parameter: 'OS'},
+  {title: 'Феноменально!', image_url: '/badges/opened.jpg', rule_type: 'first_try', parameter: ''},
+  {title: 'ЧтоРубистДаКрасавчик', image_url: '/badges/opened.jpg', rule_type: 'category', parameter: 'Ruby on Rails'}
+]
+
+Badge.create!(badges_data)
