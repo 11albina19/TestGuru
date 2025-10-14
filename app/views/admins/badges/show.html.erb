@@ -1,0 +1,24 @@
+<p>
+  <strong><%= t('.title')%></strong>
+  <h2><%= @badge.title %></h2>
+</p>
+<p>
+  <strong><%= t('.image_url')%></strong>
+  <%= @badge.image_url %>
+</p>
+<p>
+  <strong><%= t('.rule_type')%></strong>
+  <%= @badge.rule_type %>
+</p>
+<p>
+  <strong><%= t('.parameter')%></strong>
+  <%= @badge.parameter %>
+</p>
+<table>
+  <tr>
+    <th colspan="3"><%= t('.actions')%></th>
+  </tr>
+</table>
+<%= link_to t('.back'), admins_badges_path %>
+<%= link_to t('.edit'), edit_admins_badge_path(@badge) %>
+<%= link_to t('.add'), new_admins_badge_path(@badge) %>
