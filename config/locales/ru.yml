@@ -30,18 +30,53 @@ ru:
       back: "Назад"
     nav:
       title: "ТестГуру панель администратора"
+      management: "Управление бэйджами"
       welcome: "Добро пожаловать, "
       logout: "Выйти"
       name: "ТестГуру"
     questions:
       question: 
         sure: "Вы уверены?"
+    badges: 
+      badge:
+        open: "Открыть"
+        edit: "Редактировать"
+        delete: "Удалить" 
+      show:
+        title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        actions: "Действия"
+        back: "Назад"
+        edit: "Редактировать"
+        add: "Добавить бейдж"
+      index:
+        header: "Доступные бейджи"
+        create: "Создать"
+        title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        actions: "Действия"
+      form:
+        title: "Заголовок"
+        image_url: "Изображение"
+        rule_type: "Правило"
+        parameter: "Параметр"
+        save: "Сохранить"
+        back: "Назад"
+      create:
+        success: "Бейдж успешно создан"
+      badge:
+        sure: "Вы уверены?"
     tests:
       form:
         title: "Заголовок"
         level: "Уровень"
+        time_limit: "Таймер"
         category: "Категория"
-        create: "Создать тест"
+        save: "Сохранить"
         back: "Назад"
       test:
         open: "Открыть"
@@ -55,6 +90,7 @@ ru:
         header: "Доступные тесты"
         title: "Название"
         level: "Уровень"
+        time_limit: "Таймер"
         questions: "Вопросы"
         actions: "Действия"
         create: "Создать тест"
@@ -68,6 +104,7 @@ ru:
       show:
         title: "Заголовок"
         level: "Уровень"
+        time_limit: "Таймер"
         content: "Тест содержит вопросы"
         actions: "Действия"
         back: "Назад"
@@ -99,6 +136,7 @@ ru:
       login: "Войти"
       register: "Зарегистрироваться"
       panel: "Панель администратора"
+      badge: "Бэйджи"
       feedback: "Форма обратной связи"
     footer:
       author: "Сафина Альбина"
@@ -110,6 +148,7 @@ ru:
       header: "Доступные тесты"
       title: "Название"
       level: "Уровень"
+      time_limit: "Таймер"
       questions: "Вопросы"
       actions: "Действия"
     test:
@@ -117,3 +156,4 @@ ru:
 
   feedback_mailer:
     subject: "Обратная связь от TestGuru"
+    

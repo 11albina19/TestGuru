@@ -30,18 +30,53 @@ en:
       back: "Back"
     nav:
       title: "TestGuru admin panel"
+      management: "Badge Management"
       welcome: "Welcome, "
       logout: "sign out"
       name: "TestGuru"
     questions:
       question: 
         sure: "Are you sure?"
+    badges:
+      badge:
+        open: "Open"
+        edit: "Edit"
+        delete: "Delete" 
+      show:
+        title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        actions: "Actions"
+        back: "Back"
+        edit: "Edit"
+        add: "Add a badge"
+      index:
+        header: "Available badges"
+        create: "Create"
+        title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        actions: "Actions"
+      form:
+        title: "Title"
+        image_url: "Image"
+        rule_type: "Rule"
+        parameter: "Parameter"
+        save: "Save"
+        back: "Back"
+      create:
+        success: "Badge created successfully"
+      badge:
+        sure: "Are you sure?"
     tests:
       form:
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         category: "Category"
-        create: "Create test"
+        save: "Save"
         back: "Back"
       test:
         open: "Open"
@@ -55,6 +90,7 @@ en:
         header: "Available tests"
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         questions: "Questions"
         actions: "Actions"
         create: "Create a test"
@@ -68,6 +104,7 @@ en:
       show:
         title: "Title"
         level: "Level"
+        time_limit: "Timer"
         content: "The test contains questions"
         actions: "Actions"
         back: "Back"
@@ -99,6 +136,7 @@ en:
       login: "Login"
       register: "Register"
       panel: "Panel admin"
+      badge: "Badges"
       feedback: "Feedback form"
     footer:
       author: "Safina Albina"
@@ -110,6 +148,7 @@ en:
       header: "Available tests"
       title: "Title"
       level: "Level"
+      time_limit: "Timer"
       questions: "Questions"
       actions: "Actions"
     test:
@@ -117,3 +156,4 @@ en:
   
   feedback_mailer:
     subject: "Feedback from TestGuru"
+    
