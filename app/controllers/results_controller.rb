@@ -1,7 +1,9 @@
 class ResultsController < ApplicationController
   before_action :set_result, only: %i[show update result]
 
-  def show; end
+  def show
+    @server_time = Time.current.to_i
+  end
 
   def result; end
 

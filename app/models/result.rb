@@ -5,6 +5,8 @@ class Result < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  before_create :set_started_at
+
   SUCCESS_RATIO = 85
 
   def completed?
@@ -42,5 +44,10 @@ class Result < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
+  end
+
+  def set_started_at
+    self.started_at ||= Time.current
+    self.finished_at = self.started_at + test.time_limit if test.time_limit.positive?
   end
 end
