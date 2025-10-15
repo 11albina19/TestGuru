@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static values = { finishAt: Number, serverTime: Number, redirectUrl: String}
+  static values = { finishAt: Number, serverTime: Number}
   static targets = ["output"]
 
   connect() {
@@ -20,7 +20,8 @@ export default class extends Controller {
 
     if (secondsLeft <= 0) {
       clearInterval(this.timer)
-      Turbo.visit(this.redirectUrlValue)
+      const form = this.element.closest("form")
+      form.requestSubmit()
     } else {
       const minutes = Math.floor(secondsLeft / 60)
       const seconds = secondsLeft % 60

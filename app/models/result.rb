@@ -50,4 +50,8 @@ class Result < ApplicationRecord
     self.started_at ||= Time.current
     self.finished_at = self.started_at + test.time_limit if test.time_limit.positive?
   end
+
+  def time_is_up?
+    Time.current > self.finished_at
+  end
 end
