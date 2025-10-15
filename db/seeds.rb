@@ -32,11 +32,11 @@ users = User.create!([
 admin = Admin.create!(first_name: "admin", last_name: "admin", email: '11albina19@gmail.com', password: 'password123', password_confirmation: 'password123')
 
 tests = Test.create!([
-                       { title: 'Тест на основы баз данных', level: 1, category: categories[0], author: users[1] },
-                       { title: 'Тест на оптимизацию запросов', level: 3, category: categories[0], author: users[1] },
-                       { title: 'Тест на знание linux', level: 2, category: categories[3], author: users[1] },
-                       { title: 'Тест на основы git', level: 1, category: categories[1], author: users[1] },
-                       { title: 'Тест на знание миграций в Rails', level: 2, category: categories[2], author: users[1] }
+                       { title: 'Тест на основы баз данных', level: 1, time_limit: 60, category: categories[0], author: users[1] },
+                       { title: 'Тест на оптимизацию запросов', level: 3, time_limit: 60, category: categories[0], author: users[1] },
+                       { title: 'Тест на знание linux', level: 2, time_limit: 60, category: categories[3], author: users[1] },
+                       { title: 'Тест на основы git', level: 1, time_limit: 60, category: categories[1], author: users[1] },
+                       { title: 'Тест на знание миграций в Rails', level: 2, time_limit: 60, category: categories[2], author: users[1] }
                      ])
 
 questions = Question.create!([

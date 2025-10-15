@@ -1,8 +1,8 @@
-<div class="container mt-3">
-  <h2><%= t('.title') %> <%= @result.test.title %></h2>
-  <h4><%= t('.total') %> <%= amount_questions(@result.test) %></h4>
-</div>
-
+<%= form_with url: result_path(@result), local: true, method: :put do |form| %>
+  <div class="container mt-3">
+    <h2><%= t('.title') %> <%= @result.test.title %></h2>
+    <h4><%= t('.total') %> <%= amount_questions(@result.test) %></h4>
+  </div>
   <div>
     <b class="d-block fs-5">
         <div id="progress-container" class="progress-container"
@@ -10,10 +10,15 @@
           data-count="<%= amount_questions(@result.test) %>">
         <div id="progress-bar" class="progress-bar"></div>
         </div>
+        <div
+          data-controller="timer"
+          data-timer-finish-at-value="<%= @result.finished_at.to_i %>"
+          data-timer-server-time-value="<%= @server_time %>">
+        Осталось: <span data-timer-target="output"></span>
+        </div>
       <%= @result.test.questions.index(@result.current_question) + 1 %>. <%= @result.current_question.body %>
     </b>
   </div>
-  <%= form_with url: result_path(@result), local: true, method: :put do |form| %>
     <div class="mb-3">
       <%= form.collection_check_boxes :answer_ids, @result.current_question.answers, :id, :body, include_hidden: false do |f| %>
         <div class="form-check mb-1">
